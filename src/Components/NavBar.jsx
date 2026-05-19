@@ -1,17 +1,57 @@
 import { Container } from "./Container"
 import { Flex } from "./Flex"
 import Logo from "../assets/Exclusive.png"
+import { List } from "./List"
+import { ListItem } from "./ListItem"
+import { IoCartOutline } from "react-icons/io5";
+import { IoMdHeartEmpty } from "react-icons/io";
+import { IoSearch } from "react-icons/io5";
+import { FaBarsStaggered } from "react-icons/fa6";
+import { useState } from "react"
+
+
+
+
 
 export const NavBar = () => {
+
+  
+  const[show, setShow] = useState(false)
+  const handleClick =()=>{
+    setShow(!show)
+  }
+
+
+
   return (
-    <>
-    <nav>
+    <> 
+    <nav className="pt-4 lg:pt-10 pb-4 border-b-1 border-[#b3b3b3] relative">
       <Container>
         <Flex>
           <div>
-            <img src={Logo} alt="" />
+            <img src={Logo} alt="#"/>
+          </div>
+          <div>
+            <List className={`${show ? "block" : "hidden" } lg: block lg:gap-12 lg:flex`}>
+              <ListItem>Home</ListItem>
+              <ListItem>Contact</ListItem>
+              <ListItem>About</ListItem>
+              <ListItem>Sign Up</ListItem>
+            </List>
+          </div>
+          <div className="flex gap-6 items-center hidden lg:flex">
+            <div className="relative">
+              <input type="text" className="bg-[#F5F5F5] py-2.5 pl-5 pr-3 text-sm w-[243px]" placeholder="What are you looking for?"/>
+              <IoSearch  className="absolute top-2 right-2.5 text-2xl"/>
+            </div>
+            
+            <div className="flex items-center gap-4 text-3xl">
+              <IoMdHeartEmpty / >
+              <IoCartOutline />
+            </div>
           </div>
         </Flex>
+        <FaBarsStaggered onClick={handleClick} className="lg:hidden text-2xl absolute right-1 top-4" ></FaBarsStaggered>
       </Container>
     </nav>
     

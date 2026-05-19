@@ -1,17 +1,14 @@
-import { Container } from "./Container"
-import { Flex } from "./Flex"
 
 
-export const List = () => {
+
+
+export const List = ({children, className}) => {
   return (
-    <>
-    <Container>
-        <Flex>
-            
-        </Flex>
-    </Container>
+    <div>
+        <ul className={`${className}`}>
+            {children}
+        </ul>
 
-
-    </>
+    </div>
   )
 }
