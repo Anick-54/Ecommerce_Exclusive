@@ -5,7 +5,6 @@ export const RootLayOut = () => {
   return (
     <div>
         <Outlet/>
-
     </div>
   )
 }
