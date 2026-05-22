@@ -27,13 +27,20 @@ export const NavBar = () => {
     <> 
     <nav className="pt-4 lg:pt-10 pb-4 border-b-1 border-[#b3b3b3] relative">
       <Container>
-        <Flex className="flex-wrap lg:justify-between items-center">
+        <Flex className="flex-wrap lg:justify-betwee items-center">
           <div className="px-2 w-[25%]">
             <img src={Logo} alt="#"/>
           </div>
-          <div className={`${show ? "block" : "hidden"} lg:flex items-center justify-between lg:w-[75%] absolute top-15 bg-black text-white w-full px-2`}>
+          <div>
+            <div className="lg:hidden block w-[50%]">
+                <input type="text" className="bg-[#F5F5F5] text-black py-2 pl-5 pr-3 text-sm " placeholder=""/>
+                <IoSearch  className="absolute top-5.5 right-20 text-black lg:right-2.5 text-2xl"/>
+              </div>
+          </div>
+          <div className={`${show ? "block" : "hidden"} lg:flex items-center justify-between lg:w-[75%] absolute top-15 lg:static lg:bg-transparent bg-black text-white lg:text-black
+           w-full px-2`}>
             <div>
-              <List className=" flex-wrap lg:flex lg:gap-12">
+              <List className=" flex-wrap lg:flex lg:gap-12 leading-10">
                 <ListItem>Home</ListItem>
                 <ListItem>Contact</ListItem>
                 <ListItem>About</ListItem>
@@ -41,9 +48,9 @@ export const NavBar = () => {
               </List>
             </div>
             <div className="flex-wrap lg:flex gap-6 items-center">
-              <div className="relative">
-                <input type="text" className="bg-[#F5F5F5] py-2.5 pl-5 pr-3 text-sm w-[243px]" placeholder="What are you looking for?"/>
-                <IoSearch  className="absolute top-2 right-2.5 text-2xl"/>
+              <div className="relative hidden lg:block">
+                <input type="text" className="bg-[#F5F5F5] text-black py-2.5 pl-5 pr-3 text-sm w-[243px]" placeholder="What are you looking for?"/>
+                <IoSearch  className="absolute top-2 right-25 text-black lg:right-2.5 text-2xl"/>
               </div>
               
               <div className="flex items-center gap-4 text-3xl">
@@ -53,11 +60,9 @@ export const NavBar = () => {
             </div>
           </div>
         </Flex>
-        <FaBarsStaggered onClick={handleClick} className="lg:hidden text-2xl absolute right-2 top-3" ></FaBarsStaggered>
+        <FaBarsStaggered onClick={handleClick} className="lg:hidden text-2xl absolute right-2 top-5.5" ></FaBarsStaggered>
       </Container>
     </nav>
-    
-    
     </>
   )
 }
