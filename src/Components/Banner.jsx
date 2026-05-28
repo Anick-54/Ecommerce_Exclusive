@@ -4,6 +4,7 @@ import { List } from "./List"
 import { ListItem } from "./ListItem"
 import { Images } from "./Images"
 import banner from "../assets/banner.jpg"
+
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination, Navigation } from "swiper/modules"
 import "swiper/css"
@@ -11,14 +12,13 @@ import "swiper/css/pagination"
 import "swiper/css/navigation"
 
 export const Banner = () => {
+  
   return (
     <>
       <Container>
         <Flex className="gap-10">
-
-          {/* Sidebar */}
-          <div className="w-[233px] border-r-1 border-[#b3b3b3]">
-            <List className=" mt-10 text-[16px] leading-10">
+          <div className="w-[233px]  border-r-1 border-[#b3b3b3]">
+            <List className=" mt-10 text-[16px] leading-[38px]">
               <ListItem>Woman's Fashion</ListItem>
               <ListItem>Men's Fashion</ListItem>
               <ListItem>Electronics</ListItem>
@@ -32,24 +32,22 @@ export const Banner = () => {
           </div>
           <div className="flex-1 overflow-hidden mt-10">
             <Swiper
-              modules={[ Pagination, Navigation]}
-              autoplay={{ delay: 4000, disableOnInteraction: false }}
+              modules={[Pagination]}
+              spaceBetween={30}
+              slidesPerView={1}
+              navigation
               pagination={{ clickable: true }}
-              navigation={true}
-              loop={!true}
-              speed={600}
-              className="w-full h-full [&_.swiper-pagination-bullet]:bg-white [&_.swiper-pagination-bullet]:opacity-50 [&_.swiper-pagination-bullet-active]:opacity-100 mb-10 [&_.swiper-button-next]:text-white [&_.swiper-button-prev]:text-white"
+              autoplay={{ delay: 3000 }}
             >
-              {[...Array(6)].map((_, i) => (
-                <SwiperSlide key={i}>
-                  <div className="w-full">
-                    <Images src={banner} className="w-full h-full object-cover" />
-                  </div>
-                </SwiperSlide>
-              ))}
+              <SwiperSlide><Images src={banner} className="w-full h-full"/></SwiperSlide>
+              <SwiperSlide><Images src={banner} className="w-full h-full"/></SwiperSlide>
+              <SwiperSlide><Images src={banner} className="w-full h-full"/></SwiperSlide>
+              <SwiperSlide><Images src={banner} className="w-full h-full"/></SwiperSlide>
+              <SwiperSlide><Images src={banner} className="w-full h-full"/></SwiperSlide>
+              <SwiperSlide><Images src={banner} className="w-full h-full"/></SwiperSlide>
             </Swiper>
-          </div>
 
+          </div>
         </Flex>
       </Container>
     </>
