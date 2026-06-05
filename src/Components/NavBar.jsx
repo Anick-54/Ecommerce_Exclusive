@@ -41,10 +41,10 @@ export const NavBar = () => {
            w-full px-2`}>
             <div>
               <List className=" flex-wrap lg:flex lg:gap-12 leading-10">
-                <ListItem>Home</ListItem>
-                <ListItem>Contact</ListItem>
-                <ListItem>About</ListItem>
-                <ListItem>Sign Up</ListItem>
+                <ListItem className="customize">Home</ListItem>
+                <ListItem className="customize">Contact</ListItem>
+                <ListItem className="customize">About</ListItem>
+                <ListItem className="customize">Sign Up</ListItem>
               </List>
             </div>
             <div className="flex-wrap lg:flex gap-6 items-center">

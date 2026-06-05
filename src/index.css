@@ -9,8 +9,10 @@
     --breakpoint-md: 776px;
     --breakpoint-lg: 990px;
     --breakpoint-xl: 1170px;
-    --font-family:sans-serif;
-    --font-family:in
+    --color-secondary: #b3b3b3;
+    --color-primary: #db4444;
+    --font-inter: "Inter", sans-serif;
+    --font-poppins: "Poppins", sans-serif;
 }
 @utility container{
     margin: auto;
@@ -20,11 +22,28 @@
     height: 12px !important;
     opacity: 0.2!important;
     background: gray !important;
-  
 }
 
 .swiper-pagination-bullet-active {
     background: #ff00e9 !important;
-    opacity: 1 !important;
+    opacity: 1 !important; 
+}
+
+.customize{
+    position: relative;
+    cursor: pointer;
+}
+.customize::after{
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 0px;
+    width: 0px;
+    border-bottom: 2px solid gray;
+    transition: 0.4s linear;
     
+}
+.customize:hover::after{
+    width: 100%;
+  
 }

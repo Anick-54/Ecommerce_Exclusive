@@ -6,10 +6,12 @@ import { Images } from "./Images"
 import banner from "../assets/banner.jpg"
 
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Pagination, Navigation } from "swiper/modules"
+import { Pagination,} from "swiper/modules"
 import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/navigation"
+import { IoIosArrowForward } from "react-icons/io";
+
 
 export const Banner = () => {
   
@@ -17,10 +19,10 @@ export const Banner = () => {
     <>
       <Container>
         <Flex className="gap-10">
-          <div className="w-[233px]  border-r-1 border-[#b3b3b3]">
+          <div className="w-[233px]  border-r-1 border-[#b3b3b3] hidden lg:block">
             <List className=" mt-10 text-[16px] leading-[38px]">
-              <ListItem>Woman's Fashion</ListItem>
-              <ListItem>Men's Fashion</ListItem>
+              <ListItem className="flex justify-between items-center">Woman's Fashion <IoIosArrowForward className="text-2xl" /></ListItem>
+              <ListItem className="flex justify-between items-center">Men's Fashion <IoIosArrowForward className="text-2xl" /></ListItem>
               <ListItem>Electronics</ListItem>
               <ListItem>Home & Lifestyle</ListItem>
               <ListItem>Medicine</ListItem>
