@@ -11,18 +11,30 @@ import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/navigation"
 import { IoIosArrowForward } from "react-icons/io";
+import { BiCategoryAlt } from "react-icons/bi";
+import { useState } from "react"
+
 
 
 export const Banner = () => {
+
+  const[show, setShow] = useState(false);
+  const handleClick = () => {
+    setShow(!show)
+  }
   
   return (
     <>
       <Container>
-        <Flex className="gap-10">
-          <div className="w-[233px]  border-r-1 border-[#b3b3b3] hidden lg:block">
-            <List className=" mt-10 text-[16px] leading-[38px]">
-              <ListItem className="flex justify-between items-center">Woman's Fashion <IoIosArrowForward className="text-2xl" /></ListItem>
-              <ListItem className="flex justify-between items-center">Men's Fashion <IoIosArrowForward className="text-2xl" /></ListItem>
+        <div className="lg:flex lg:gap-10">
+          <div className="flex lg:hidden gap-2 text-2xl items-center font-bold pl-2.5 mt-5">
+            <BiCategoryAlt onClick={handleClick} className="lg:hidden cursor-pointer"/>
+            <h2>Category</h2>
+          </div>
+          <div className={` ${show ? 'block' : 'hidden'} lg:flex w-[233px]  sm:w-1/4 lg:border-r border-r-0 pl-2.5`}>
+            <List className="lg:mt-10 text-[16px] mt-4 lg:leading-[38px]">
+              <ListItem className="lg:flex lg:gap-30 items-center flex justify-between">Woman's Fashion <IoIosArrowForward className="text-2xl" /></ListItem>
+              <ListItem className="lg:flex lg:justify-between items-center flex justify-between">Men's Fashion <IoIosArrowForward className="text-2xl" /></ListItem>
               <ListItem>Electronics</ListItem>
               <ListItem>Home & Lifestyle</ListItem>
               <ListItem>Medicine</ListItem>
@@ -32,7 +44,8 @@ export const Banner = () => {
               <ListItem>Health & Beauty</ListItem>
             </List>
           </div>
-          <div className="flex-1 overflow-hidden mt-10">
+          
+          <div className="flex-1 overflow-hidden mt-14">
             <Swiper
               modules={[Pagination]}
               spaceBetween={30}
@@ -50,7 +63,7 @@ export const Banner = () => {
             </Swiper>
 
           </div>
-        </Flex>
+        </div>
       </Container>
     </>
   )
