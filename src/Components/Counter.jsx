@@ -19,7 +19,7 @@ export const Counter = () => {
 
   return (
     <>
-    <Flex className="lg:gap-[38px] gap-5 items-center text-center">
+    <Flex className="lg:gap-[38px] gap-5 items-center text-center lg:mt-20 mt-3">
         
         <div>
             <h1 className='text-[12px] font-medium font-inter'>Day's</h1>

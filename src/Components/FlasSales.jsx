@@ -8,16 +8,13 @@ export const FlasSales = () => {
    <>
    <Container className="lg:mt-[163px] mt-15 pl-2.5">
      
-      <SecHead>Todays</SecHead>
-      <div className="lg:flex gap-10 mt-6 gap-x-[120px]">
-        <div className="text-[36px] font-semibold font-inter">
-          <h1>Flash Sales</h1>
-        </div>
-        <Counter/>
-        
-      </div>
-      
-     
+     <div className="lg:flex lg:gap-[120px]">
+      <SecHead 
+        title="Today's"
+        heading="Flash Sales"
+      />
+      <Counter/>
+     </div>
 
    </Container>
    </>
