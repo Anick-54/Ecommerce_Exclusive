@@ -31,7 +31,7 @@ export const Banner = () => {
             <BiCategoryAlt onClick={handleClick} className="lg:hidden cursor-pointer"/>
             <h2>Category</h2>
           </div>
-          <div className={` ${show ? 'block' : 'hidden'} lg:flex w-[233px]  sm:w-1/4 lg:border-r border-r-0 pl-2.5`}>
+          <div className={` ${show ? 'block' : 'hidden'} lg:flex w-[233px]  sm:w-1/4 lg:border-r border-secondary border-r-0 pl-2.5`}>
             <List className="lg:mt-10 text-[16px] mt-4 lg:leading-[38px]">
               <ListItem className="lg:flex lg:gap-30 items-center flex justify-between">Woman's Fashion <IoIosArrowForward className="text-2xl" /></ListItem>
               <ListItem className="lg:flex lg:justify-between items-center flex justify-between">Men's Fashion <IoIosArrowForward className="text-2xl" /></ListItem>
