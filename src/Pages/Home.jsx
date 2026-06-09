@@ -1,4 +1,6 @@
 import { Banner } from "../Components/Banner"
+import { BestSell } from "../Components/BestSell"
+import { Browse } from "../Components/Browse"
 import { FlasSales } from "../Components/FlasSales"
 import { Header } from "../Components/Header"
 import { NavBar } from "../Components/NavBar"
@@ -11,6 +13,8 @@ export const Home = () => {
     <NavBar/>
     <Banner/>
     <FlasSales/>
+    <Browse/>
+    <BestSell/>
     </>
   )
 }
