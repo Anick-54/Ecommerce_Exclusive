@@ -7,7 +7,7 @@ import { FaStar } from "react-icons/fa";
 
  
 
-export const Card = ({img, heading, price, rating, discount}) => {
+export const Card = ({img, heading, price, rating, discount, prices}) => {
   return (
     <>
     <div className="w-[270px] group cursor-pointer">
@@ -28,7 +28,10 @@ export const Card = ({img, heading, price, rating, discount}) => {
         </div>
         <div className="#">
             <h2 className="font-medium pt-4 text-[16px] font-poppins">{heading}</h2>
-            <h2 className="text-primary font-bold py-2 font-poppins text-[16px]">{price}</h2>
+            <div className="flex gap-3">
+                <h2 className="text-primary font-bold py-2 font-poppins text-[16px]">{price}</h2>
+                <h2 className="text-secondary font-bold py-2 font-poppins text-[16px] line-through">{prices}</h2>
+            </div>
             <div className="flex text-[#ffad33] text-sm gap-2">
                 <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
                 <div className="text-[14px] text-black font-semibold font-poppins">

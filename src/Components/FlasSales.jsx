@@ -16,26 +16,31 @@ import { FaLongArrowAltLeft } from "react-icons/fa";
 
 
 const cards = [
-  { img: Gamepad,  heading: "HAVIT HV-G92 Gamepad",   price: "$120", rating: "(88)", discount: "-40%" },
-  { img: KeyBoard, heading: "AK-900 Wired Keyboard",  price: "$960", rating: "(75)", discount: "-35%" },
-  { img: Monitor,  heading: "IPS LCD Gaming Monitor", price: "$370", rating: "(99)", discount: "-30%" },
-  { img: Chair,    heading: "S-Series Comfort Chair", price: "$375", rating: "(99)", discount: "-25%" },
-  { img: Gamepad,  heading: "HAVIT HV-G92 Gamepad",   price: "$120", rating: "(88)", discount: "-40%" },
-  { img: KeyBoard, heading: "AK-900 Wired Keyboard",  price: "$960", rating: "(75)", discount: "-35%" },
-  { img: Monitor,  heading: "IPS LCD Gaming Monitor", price: "$370", rating: "(99)", discount: "-30%" },
-  { img: Chair,    heading: "S-Series Comfort Chair", price: "$375", rating: "(99)", discount: "-25%" },
-  { img: Gamepad,  heading: "HAVIT HV-G92 Gamepad",   price: "$120", rating: "(88)", discount: "-40%" },
-  { img: KeyBoard, heading: "AK-900 Wired Keyboard",  price: "$960", rating: "(75)", discount: "-35%" },
-  { img: Monitor,  heading: "IPS LCD Gaming Monitor", price: "$370", rating: "(99)", discount: "-30%" },
-  { img: Chair,    heading: "S-Series Comfort Chair", price: "$375", rating: "(99)", discount: "-25%" },
-  { img: Gamepad,  heading: "HAVIT HV-G92 Gamepad",   price: "$120", rating: "(88)", discount: "-40%" },
-  { img: KeyBoard, heading: "AK-900 Wired Keyboard",  price: "$960", rating: "(75)", discount: "-35%" },
-  { img: Monitor,  heading: "IPS LCD Gaming Monitor", price: "$370", rating: "(99)", discount: "-30%" },
-  { img: Chair,    heading: "S-Series Comfort Chair", price: "$375", rating: "(99)", discount: "-25%" },
-  { img: Gamepad,  heading: "HAVIT HV-G92 Gamepad",   price: "$120", rating: "(88)", discount: "-40%" },
-  { img: KeyBoard, heading: "AK-900 Wired Keyboard",  price: "$960", rating: "(75)", discount: "-35%" },
-  { img: Monitor,  heading: "IPS LCD Gaming Monitor", price: "$370", rating: "(99)", discount: "-30%" },
-  { img: Chair,    heading: "S-Series Comfort Chair", price: "$375", rating: "(99)", discount: "-25%" },
+  { img: Gamepad,  heading: "HAVIT HV-G92 Gamepad",   price: "$120", rating: "(88)", discount: "-40%", prices: "$160" },
+  { img: KeyBoard, heading: "AK-900 Wired Keyboard",  price: "$960", rating: "(75)", discount: "-35%", prices: "$1160"},
+  { img: Monitor,  heading: "IPS LCD Gaming Monitor", price: "$370", rating: "(99)", discount: "-30%", prices: "$400" },
+  { img: Chair,    heading: "S-Series Comfort Chair", price: "$375", rating: "(99)", discount: "-25%", prices: "$400" },
+  { img: Gamepad,  heading: "HAVIT HV-G92 Gamepad",   price: "$120", rating: "(88)", discount: "-40%", prices: "$160" },
+  { img: KeyBoard, heading: "AK-900 Wired Keyboard",  price: "$960", rating: "(75)", discount: "-35%", prices: "$1160"},
+  { img: Monitor,  heading: "IPS LCD Gaming Monitor", price: "$370", rating: "(99)", discount: "-30%", prices: "$400" },
+  { img: Chair,    heading: "S-Series Comfort Chair", price: "$375", rating: "(99)", discount: "-25%", prices: "$400" },
+  { img: Gamepad,  heading: "HAVIT HV-G92 Gamepad",   price: "$120", rating: "(88)", discount: "-40%", prices: "$160" },
+  { img: KeyBoard, heading: "AK-900 Wired Keyboard",  price: "$960", rating: "(75)", discount: "-35%", prices: "$1160"},
+  { img: Monitor,  heading: "IPS LCD Gaming Monitor", price: "$370", rating: "(99)", discount: "-30%", prices: "$400" },
+  { img: Chair,    heading: "S-Series Comfort Chair", price: "$375", rating: "(99)", discount: "-25%", prices: "$400" },
+  { img: Gamepad,  heading: "HAVIT HV-G92 Gamepad",   price: "$120", rating: "(88)", discount: "-40%", prices: "$160" },
+  { img: KeyBoard, heading: "AK-900 Wired Keyboard",  price: "$960", rating: "(75)", discount: "-35%", prices: "$1160"},
+  { img: Monitor,  heading: "IPS LCD Gaming Monitor", price: "$370", rating: "(99)", discount: "-30%", prices: "$400" },
+  { img: Chair,    heading: "S-Series Comfort Chair", price: "$375", rating: "(99)", discount: "-25%", prices: "$400" },
+  { img: Gamepad,  heading: "HAVIT HV-G92 Gamepad",   price: "$120", rating: "(88)", discount: "-40%", prices: "$160" },
+  { img: KeyBoard, heading: "AK-900 Wired Keyboard",  price: "$960", rating: "(75)", discount: "-35%", prices: "$1160"},
+  { img: Monitor,  heading: "IPS LCD Gaming Monitor", price: "$370", rating: "(99)", discount: "-30%", prices: "$400" },
+  { img: Chair,    heading: "S-Series Comfort Chair", price: "$375", rating: "(99)", discount: "-25%", prices: "$400" },
+  { img: Gamepad,  heading: "HAVIT HV-G92 Gamepad",   price: "$120", rating: "(88)", discount: "-40%", prices: "$160" },
+  { img: KeyBoard, heading: "AK-900 Wired Keyboard",  price: "$960", rating: "(75)", discount: "-35%", prices: "$1160"},
+  { img: Monitor,  heading: "IPS LCD Gaming Monitor", price: "$370", rating: "(99)", discount: "-30%", prices: "$400" },
+  { img: Chair,    heading: "S-Series Comfort Chair", price: "$375", rating: "(99)", discount: "-25%", prices: "$400" },
+  
 
 ]
 
@@ -89,6 +94,7 @@ export const FlasSales = () => {
                 price={card.price}
                 rating={card.rating}
                 discount={card.discount}
+                prices={card.prices}
               />
             </SwiperSlide>
           ))}

@@ -4,7 +4,7 @@ import { Images } from './Images';
 import Dot from "../assets/Dot.png"
 import { useEffect, useState } from 'react';
 
-export const Counter = () => {
+export const Counter = ({className}) => {
 
 
     const conduct_date = '2026-06-30 16:54:00';
@@ -19,7 +19,7 @@ export const Counter = () => {
 
   return (
     <>
-    <Flex className="lg:gap-[38px] gap-5 items-center text-center lg:mt-20 mt-3">
+    <Flex className={`${className} lg:gap-[38px] gap-5 items-center text-center lg:mt-20 mt-3`}>
         
         <div>
             <h1 className='text-[12px] font-medium font-inter'>Day's</h1>
