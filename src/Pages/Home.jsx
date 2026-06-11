@@ -6,6 +6,7 @@ import { Header } from "../Components/Header"
 import { Music } from "../Components/Music"
 import {OurP} from "../Components/OurP"
 import { NavBar } from "../Components/NavBar"
+import { New } from "../Components/New"
 
 
 export const Home = () => {
@@ -19,6 +20,7 @@ export const Home = () => {
     <BestSell/>
     <Music/>
     <OurP/>
+    <New/>
     
  
     </>

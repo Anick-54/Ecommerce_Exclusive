@@ -41,7 +41,7 @@ export const OurP = () => {
   const [swiperInstance, setSwiperInstance] = useState(null)
 
   return (
-    <Container className="lg:mt-[163px] mt-15 pl-2.5">
+    <Container className="lg:mt-[163px] mb-[168px] mt-15 pl-2.5">
       <div className="lg:flex lg:justify-between">
         <div className="lg:flex lg:gap-[120px]">
           <SecHead
