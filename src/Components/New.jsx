@@ -15,7 +15,7 @@ export const New = () => {
                 heading="New Arrival"
                 />
             </div>
-            <div className="mt-10 mb-[140px] lg:flex justify-between">
+            <div className="mt-10 lg:mb-[140px] lg:flex justify-between">
                 <div>
                     <div className=" bg-cover bg-center w-[570px] h-[600px]" style={{backgroundImage: `url(${N1})`}}>
                         <div className="pt-[446px] pl-[32px]">
