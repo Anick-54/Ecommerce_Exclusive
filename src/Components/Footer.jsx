@@ -69,19 +69,13 @@ export const Footer = () => {
                             <div className="hover:text-primary cursor-pointer"><FaTwitter /></div>
                             <div className="hover:text-primary cursor-pointer"><FaInstagram /></div>
                             <div className="hover:text-primary cursor-pointer"><FaLinkedinIn /></div>
-                        
-
                         </div>
-
-                    </div>
-                    
+                    </div>                    
                 </div>
             </Container>
             <div>
                 <div className="border-b-1 border-secondary mt-15"/>
-                <p className="text-secondary text-[16px] text-center pt-4">&copy;Copyright Anick 2026. All right reserved</p>
-                 
-                
+                <p className="text-secondary text-[16px] text-center pt-4">&copy;Copyright Anick 2026. All right reserved</p>  
             </div> 
            
             
