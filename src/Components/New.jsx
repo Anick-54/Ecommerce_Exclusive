@@ -24,7 +24,6 @@ export const New = () => {
                             <p className="text-white text-[16px] font-medium  font-poppins underline">Shop Now</p>
                         </div>
                     </div>
-
                 </div>
                 <div>
                     <div className="bg-cover bg-center w-[570px] h-[284px] mt-8 lg:mt-0" style={{backgroundImage : `url(${N2})`}}>
@@ -32,7 +31,6 @@ export const New = () => {
                             <h5 className="text-2xl font-semibold font-inter text-white">Women’s Collections</h5>
                             <p className="text-[14px] pt-4 pb-4 leading-5.5 font-poppins text-white w-[255px]">Featured woman collections that give you another vibe.</p>
                             <p className="text-white text-[16px] font-medium  font-poppins underline">Shop Now</p>
-
                         </div>
                     </div>
                     <div className="mt-8 flex justify-between">
@@ -49,12 +47,6 @@ export const New = () => {
                 </div>
             </div>
         </Container>
-
-
-
-
-
-
     </>
   )
 }

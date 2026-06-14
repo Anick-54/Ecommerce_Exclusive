@@ -34,7 +34,6 @@ const cards = [
   { img: Camra,  heading: "CANON EOS DSLR Camera",   price: "$960", rating: "(95)", discount:"$0"  },
   { img: Laptop, heading: "ASUS FHD Gaming Laptop",  price: "$370", rating: "(325)", discount:"$0" },
   { img: Crim,   heading: "Curology Product Set",    price: "$375", rating: "(145)", discount:"$0" },
-  
 ]
 
 export const OurP = () => {
