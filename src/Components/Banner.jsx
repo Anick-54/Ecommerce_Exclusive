@@ -15,14 +15,12 @@ import { BiCategoryAlt } from "react-icons/bi";
 import { useState } from "react"
 
 
-
 export const Banner = () => {
 
   const[show, setShow] = useState(false);
   const handleClick = () => {
     setShow(!show)
-  }
-  
+  }  
   return (
     <>
       <Container>
@@ -43,8 +41,7 @@ export const Banner = () => {
               <ListItem>Groceries &</ListItem>
               <ListItem>Health & Beauty</ListItem>
             </List>
-          </div>
-          
+          </div> 
           <div className="flex-1 overflow-hidden mt-14">
             <Swiper
               modules={[Pagination]}

@@ -5,8 +5,6 @@ import { FaStar } from "react-icons/fa";
 
 
 
- 
-
 export const Card3 = ({img, heading, price, rating,}) => {
   return (
     <>

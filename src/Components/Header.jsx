@@ -31,9 +31,6 @@ export const Header = () => {
             </Flex>
         </Container>
     </header>
-
-
-
    </>
   )
 }

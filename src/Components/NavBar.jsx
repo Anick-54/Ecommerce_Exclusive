@@ -11,8 +11,6 @@ import { useState } from "react"
 
 
 
-
-
 export const NavBar = () => {
 
   
@@ -20,7 +18,6 @@ export const NavBar = () => {
   const handleClick =()=>{
     setShow(!show)
   }
-
   return (
     <> 
     <nav className="pt-4 lg:pt-10 pb-4 border-b-1 border-[#b3b3b3] relative">

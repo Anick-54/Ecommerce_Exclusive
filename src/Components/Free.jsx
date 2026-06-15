@@ -21,7 +21,6 @@ export const Free = () => {
                     <h5 className="text-[20px] font-semibold font-poppins pt-6 pb-2 ">FREE AND FAST DELIVERY</h5>
                     <p className="text-[14px] font-poppins">Free delivery for all orders over $140</p>
                 </div>
-
             </div>
         
             <div className="w-[262px] text-center">
@@ -32,7 +31,6 @@ export const Free = () => {
                     <h5 className="text-[20px] font-semibold font-poppins pt-6 pb-2 ">24/7 CUSTOMER SERVICE</h5>
                     <p className="text-[14px] font-poppins">24/7 CUSTOMER SERVICE</p>
                 </div>
-
             </div>
             <div className="w-[262px] text-center">
                 <div className="flex justify-center items-center">
@@ -40,8 +38,6 @@ export const Free = () => {
                 </div>
                 <h5 className="text-[20px] font-semibold font-poppins pt-6 pb-2 ">MONEY BACK GUARANTEE</h5>
                 <p className="text-[14px] font-poppins">We reurn money within 30 days</p>
-                
-
             </div>
             
         </Flex>
@@ -49,10 +45,6 @@ export const Free = () => {
             <FaLongArrowAltUp className="absolute top-2.5 left-3 text-2xl"/>
         </div>
     </Container>
-
-
-
-
    </>
   )
 }

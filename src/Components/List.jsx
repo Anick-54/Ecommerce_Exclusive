@@ -1,7 +1,5 @@
 
 
-
-
 export const List = ({children, className}) => {
   return (
     <>

@@ -13,9 +13,6 @@ import Coller from "../assets/B3.png"
 import Book from "../assets/B4.png"
 
 
-
-
-
 const card3s = [
   { img: Short,  heading: "HAVIT HV-G92 Gamepad",   price: "$120", rating: "(88)" },
   { img: Bag, heading: "AK-900 Wired Keyboard",  price: "$960", rating: "(75)" },

@@ -1,5 +1,4 @@
 
-
 export const Card2 = ({img, devName}) => {
   return (
     <>
