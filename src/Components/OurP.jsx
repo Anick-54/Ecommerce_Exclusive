@@ -94,7 +94,6 @@ export const OurP = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-
       <button
         className="cursor-pointer hover:bg-red-800 w-[234px] h-[56px] bg-primary text-white
                    text-[16px] font-medium font-poppins flex justify-center items-center
@@ -102,7 +101,6 @@ export const OurP = () => {
       >
         View All Products
       </button>
-
     </Container>
   )
 }

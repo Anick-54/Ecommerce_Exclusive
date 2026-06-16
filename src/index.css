@@ -28,7 +28,6 @@
     background: #ff00e9 !important;
     opacity: 1 !important; 
 }
-
 .customize{
     position: relative;
     cursor: pointer;
@@ -40,8 +39,7 @@
     left: 0px;
     width: 0px;
     border-bottom: 2px solid gray;
-    transition: 0.4s linear;
-    
+    transition: 0.4s linear; 
 }
 .customize:hover::after{
     width: 100%;

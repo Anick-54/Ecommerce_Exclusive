@@ -11,9 +11,6 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 
 
-
-
-
 export const Footer = () => {
   return (
     <>

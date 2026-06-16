@@ -16,7 +16,6 @@ export const Counter = ({className}) => {
         setCount(countDown)
     },[count])
     
-
   return (
     <>
     <Flex className={`${className} lg:gap-[38px] gap-5 items-center text-center lg:mt-20 mt-3`}>

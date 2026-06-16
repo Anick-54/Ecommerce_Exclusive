@@ -6,9 +6,6 @@ import { RootLayOut } from './RootLayOut';
 import { Home } from './Pages/Home';
 
 
-
-
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,7 +15,6 @@ const router = createBrowserRouter([
     ],
   },
 ]);
-
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router} />
