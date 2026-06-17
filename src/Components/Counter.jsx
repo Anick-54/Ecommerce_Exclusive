@@ -9,12 +9,19 @@ export const Counter = ({className}) => {
 
     const conduct_date = '2026-06-30 16:54:00';
 
-    const[count, setCount] = useState({})
+    const [count, setCount] = useState({});
 
-    useEffect (() => {
-        const countDown = countDownDateAndTime(conduct_date);
-        setCount(countDown)
-    },[count])
+    useEffect(() => {
+        const updateCount = () => {
+            setCount(countDownDateAndTime(conduct_date));
+        };
+
+        updateCount(); 
+        const intervalId = setInterval(updateCount, 1000);
+
+        return () => clearInterval(intervalId);
+    }, []); 
+          
     
   return (
     <>
@@ -40,8 +47,6 @@ export const Counter = ({className}) => {
             <h2 className='text-[32px] font-bold font-poppins'>{count.seconds}</h2>
         </div>     
     </Flex>
-
-
     </>
   )
 }
