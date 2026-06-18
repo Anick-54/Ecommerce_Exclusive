@@ -20,13 +20,10 @@ export const Counter = ({className}) => {
         const intervalId = setInterval(updateCount, 1000);
 
         return () => clearInterval(intervalId);
-    }, []); 
-          
-    
+    }, []);       
   return (
     <>
     <Flex className={`${className} lg:gap-[38px] gap-5 items-center text-center lg:mt-20 mt-3`}>
-        
         <div>
             <h1 className='text-[12px] font-medium font-inter'>Day's</h1>
             <h2 className='text-[32px] font-bold font-poppins'>{count.days}</h2>
