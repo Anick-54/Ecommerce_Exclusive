@@ -25,7 +25,7 @@ export const Header = () => {
                     </button>
                 </div>
                 <div className={`${show ? 'block' : 'hidden'} absolute top-16 right-0
-                 px-5 z-20 lg:top-10 lg:right-70 lg:px-5 lg: block flex-wrap w-40 h-20 bg-black text-white text-[16px] pl-5 pt-4 ml-5 leading-7`}>
+                 px-5 z-50 lg:top-10 lg:right-70 lg:px-5 lg: block flex-wrap w-40 h-20 bg-black text-white text-[16px] pl-5 pt-4 ml-5 leading-7`}>
                     <h4>English (UK)</h4>
                     <h4>Bangla</h4>
                 </div>

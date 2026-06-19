@@ -8,6 +8,7 @@ import { IoMdHeartEmpty } from "react-icons/io";
 import { IoSearch } from "react-icons/io5";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 
 
@@ -32,14 +33,26 @@ export const NavBar = () => {
                 <IoSearch  className="absolute top-5.5 right-20 text-black lg:right-2.5 text-2xl"/>
               </div>
           </div>
-          <div className={`${show ? "block" : "hidden"} lg:flex items-center justify-between lg:w-[75%] absolute top-15 lg:static lg:bg-transparent bg-black text-white lg:text-black
+          <div className={`${show ? "block" : "hidden"} lg:flex items-center justify-between lg:w-[75%] absolute top-15 lg:static z-20 lg:bg-transparent bg-black text-white lg:text-black
            w-full px-2`}>
             <div>
               <List className=" flex-wrap lg:flex lg:gap-12 leading-10">
-                <ListItem className="customize">Home</ListItem>
-                <ListItem className="customize">Contact</ListItem>
-                <ListItem className="customize">About</ListItem>
-                <ListItem className="customize">Sign Up</ListItem>
+                <ListItem className="customize">
+                  <Link to="/">Home</Link>
+                </ListItem>
+                <ListItem className="customize">
+                  <Link to="/">Contact</Link>
+                </ListItem>
+                <ListItem className="customize">
+                  <Link to="/">About</Link>
+                </ListItem>
+                {/* <ListItem className="customize">
+                  <Link to="/">Shop</Link>
+                </ListItem> */}
+                <ListItem className="customize">
+                  <Link to="/">SingUp</Link>
+                </ListItem>
+                
               </List>
             </div>
             <div className="flex-wrap lg:flex gap-6 items-center">
