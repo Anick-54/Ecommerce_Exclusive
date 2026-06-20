@@ -8,7 +8,6 @@ export const BredCrumb = () => {
   return (
     <Container>
       <div className="flex gap-4 items-center">
-        
         <h2>Home</h2>
         {pathSegments.map((segment, index) => (
           <span key={`${segment}-${index}`} className="flex items-center gap-2">
