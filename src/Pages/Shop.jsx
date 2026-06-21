@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { BredCrumb } from "../Components/BredCrumb"
 import { Card4 } from "../Components/Card4";
 import { Container } from "../Components/Container"
@@ -11,10 +11,12 @@ import { IoIosArrowForward } from "react-icons/io";
 
 export const Shop = () => {
 
+   const [products, setProducts] = useState ([])
+
     useEffect ( () => {
         fetch('https://dummyjson.com/products')
         .then(res => res.json())
-        .then(console.log);
+        .then( (data) => setProducts(data.products) );
     }, [])
 
 
@@ -25,11 +27,11 @@ export const Shop = () => {
 
   return (
     <>
-        <Container className="mt-10">
+        <Container className="mt-10 mb-10">
             <BredCrumb/>
-            <div className="flex justify-between">
-                <div className="w-[233px]">
-                    <List className="lg:mt-10 text-[16px] mt-4 lg:leading-[38px]">
+            <div className="flex gap-10">
+                <div className="w-[233px]! h-50">
+                    <List className="lg:mt-10 text-[16px] mt-4 lg:leading-[38px] w-[233px]!">
                         <ListItem className="flex justify-between items-center">Woman's Fashion <IoIosArrowForward className="text-2xl" /></ListItem>
                         <ListItem className="flex justify-between items-center">Men's Fashion <IoIosArrowForward className="text-2xl" /></ListItem>
                         <ListItem>Electronics</ListItem>
@@ -41,14 +43,12 @@ export const Shop = () => {
                         <ListItem>Health & Beauty</ListItem>
                     </List>
                 </div>
-                <div>
-                    <Card4
-                        img=''
-                        heading='aahsiahdusdm '
-                        price='$50'
-                        prices='$75'
-                        rating='4.5'
-                    />
+                <div className="flex flex-wrap gap-10">
+                    {
+                        products.map((item) => (
+                            <Card4 key={item.id} item={item} />
+                        ))
+                    }
                 </div>
             </div>
         </Container>
