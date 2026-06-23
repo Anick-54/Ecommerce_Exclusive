@@ -41,16 +41,16 @@ export const NavBar = () => {
                   <Link to="/">Home</Link>
                 </ListItem>
                 <ListItem className="customize">
-                  <Link to="/">Contact</Link>
+                  <Link to="/contact">Contact</Link>
                 </ListItem>
                 <ListItem className="customize">
-                  <Link to="/">About</Link>
+                  <Link to="/about">About</Link>
                 </ListItem>
-                {/* <ListItem className="customize">
-                  <Link to="/">Shop</Link>
-                </ListItem> */}
                 <ListItem className="customize">
-                  <Link to="/">SingUp</Link>
+                  <Link to="/shop">Shop</Link>
+                </ListItem>
+                <ListItem className="customize">
+                  <Link to="/singuup">SingUp</Link>
                 </ListItem>
                 
               </List>
