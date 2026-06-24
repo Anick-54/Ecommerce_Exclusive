@@ -5,6 +5,8 @@ import { Container } from "../Components/Container"
 import { List } from "../Components/List"
 import { ListItem } from "../Components/ListItem"
 import { IoIosArrowForward } from "react-icons/io";
+import { Pagination } from "../Components/Pagination";
+import Item from "antd/es/list/Item";
 
 
 
@@ -17,8 +19,11 @@ export const Shop = () => {
     useEffect ( () => {
         fetch('https://dummyjson.com/products')
         .then(res => res.json())
-        .then( (data) => setProducts(data.products) );
-        setLoading (false)
+        .then( (data)=>{
+            setProducts(data.products);
+            setLoading (false);
+        });
+        
 
     }, [])
 
@@ -71,6 +76,7 @@ export const Shop = () => {
                                 </div>
                             </div>
                             :
+                            // <Pagination itemsPerPage={4} products={products}/>
                             products.map((item) => (
                                 <Card4 key={item.id} item={item} />
                             ))
