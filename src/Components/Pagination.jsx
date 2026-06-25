@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReactPaginate from 'react-paginate';
 
 export const Pagination = ({ itemsPerPage, products }) => {
-  const items = products; // use the real data instead of the hardcoded array
+  const items = products;
 
   function Items({ currentItems }) {
     return (
@@ -16,7 +16,6 @@ export const Pagination = ({ itemsPerPage, products }) => {
       </>
     );
   }
-
   const [itemOffset, setItemOffset] = useState(0);
   const endOffset = itemOffset + itemsPerPage;
   const currentItems = items.slice(itemOffset, endOffset);
@@ -26,7 +25,6 @@ export const Pagination = ({ itemsPerPage, products }) => {
     const newOffset = (event.selected * itemsPerPage) % items.length;
     setItemOffset(newOffset);
   };
-
   return (
     <>
       <Items currentItems={currentItems} />

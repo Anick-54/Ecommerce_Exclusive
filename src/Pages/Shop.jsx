@@ -24,10 +24,7 @@ export const Shop = () => {
             setLoading (false);
         });
         
-
     }, [])
-
-
 
   return (
     <>
