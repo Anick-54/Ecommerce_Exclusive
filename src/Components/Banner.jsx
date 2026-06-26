@@ -45,6 +45,7 @@ export const Banner = () => {
           <div className="flex-1 overflow-hidden mt-14">
             <Swiper
               modules={[Pagination]}
+              className="[--swiper-pagination-color:#ff00e9] [--swiper-pagination-bullet-width:12px] [--swiper-pagination-bullet-height:12px] [--swiper-pagination-bullet-inactive-color:#999]"
               spaceBetween={30}
               slidesPerView={1}
               navigation

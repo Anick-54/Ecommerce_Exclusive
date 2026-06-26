@@ -32,7 +32,7 @@ export const Shop = () => {
             <BredCrumb/>
             <div className="lg:flex">
                 <div className="w-[25%]! pl-12 lg:pl-0 h-50">
-                    <List className="lg:mt-10 text-[16px] mt-4 lg:leading-[38px] w-[233px]!">
+                    <List className="lg:mt-10 text-[16px] mt-4 lg:leading-9.5 w-58.25!">
                         <ListItem className="flex justify-between items-center">Woman's Fashion <IoIosArrowForward className="text-2xl" /></ListItem>
                         <ListItem className="flex justify-between items-center">Men's Fashion <IoIosArrowForward className="text-2xl" /></ListItem>
                         <ListItem>Electronics</ListItem>

@@ -17,7 +17,7 @@
 @utility container{
     margin: auto;
 }
-.swiper-pagination-bullet {
+/* .swiper-pagination-bullet {
     width: 12px!important;
     height: 12px !important;
     opacity: 0.2!important;
@@ -27,7 +27,7 @@
 .swiper-pagination-bullet-active {
     background: #ff00e9 !important;
     opacity: 1 !important; 
-}
+} */
 .customize{
     position: relative;
     cursor: pointer;
