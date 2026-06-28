@@ -2,6 +2,11 @@ import { useState } from 'react';
 import ReactPaginate from 'react-paginate';
 import { Card4 } from './Card4';
 
+
+
+
+
+
 export const Pagination = ({itemsParPage, item}) =>{
   const items = item;
   function Items({currentItems}){
@@ -41,7 +46,6 @@ export const Pagination = ({itemsParPage, item}) =>{
     </>
   );
 
-  
 }
 
 
