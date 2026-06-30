@@ -6,6 +6,8 @@ import { RootLayOut } from './RootLayOut';
 import { Home } from './Pages/Home';
 import {About} from './Pages/About';
 import { Shop } from './Pages/Shop';
+import { Provider } from 'react-redux'
+import { store } from './Store';
 
 
 
@@ -23,7 +25,9 @@ const router = createBrowserRouter([
 ]);
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </StrictMode>
 )
 
