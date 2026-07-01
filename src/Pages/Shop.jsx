@@ -6,6 +6,8 @@ import { ListItem } from "../Components/ListItem"
 import { IoIosArrowForward } from "react-icons/io";
 import { Card4 } from "../Components/Card4";
 // import { Pagination } from "../Components/Pagination";
+// import Animate from '../Components/Animate';
+
 
 
 
@@ -29,7 +31,32 @@ export const Shop = () => {
     }, [])
 
   return (
-    <>
+    <>  
+    {/* <div style={{ width: '100%', height: '600px', position: 'relative' }}>
+                <Animate
+                    colors={['#A6C8FF', '#5227FF', '#FF9FFC']}
+                    backgroundColor="#0A29FF"
+                    speed={0.5}
+                    streakCount={2}
+                    streakWidth={1}
+                    streakLength={1}
+                    glow={1}
+                    density={0.6}
+                    twinkle={1}
+                    zoom={3}
+                    backgroundGlow={0.5}
+                    opacity={1}
+                    mouseInteraction
+                    mouseStrength={0.5}
+                    mouseRadius={1}
+                    color1="#A6C8FF"
+                    color2="#EF4444"
+                    color3="#c20526"
+                />
+    </div> */}
+
+
+
         <Container className="mt-10 mb-10">
             <BredCrumb/>
             <div className="lg:flex">
