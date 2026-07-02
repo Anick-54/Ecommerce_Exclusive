@@ -5,7 +5,7 @@ import { List } from "../Components/List"
 import { ListItem } from "../Components/ListItem"
 import { IoIosArrowForward } from "react-icons/io";
 import { Card4 } from "../Components/Card4";
-// import { Pagination } from "../Components/Pagination";
+import { Pagination } from "../Components/Pagination";
 // import Animate from '../Components/Animate';
 
 
@@ -14,7 +14,7 @@ import { Card4 } from "../Components/Card4";
 
 export const Shop = () => {
 
-    // const [optionShow, setOptionShow] = useState (6)
+    const [optionShow, setOptionShow] = useState (6)
 
 
    const [loading, setLoading] = useState (true)
@@ -77,12 +77,16 @@ export const Shop = () => {
                 <div className="w-[75%]">
                     <div className="flex justify-end gap-2 pt-10 lg:pt-0">
                         <h5 className="mt-1.5">Show :</h5>
-                            <select className="py-2 px-3 mb-5">
+                        <select
+                            className="py-2 px-3 mb-5"
+                            value={optionShow}
+                            onChange={(e) => setOptionShow(Number(e.target.value))}
+                        >
                             <option value={6}>6</option>
                             <option value={12}>12</option>
                             <option value={18}>18</option>
                             <option value={24}>24</option>
-                       </select>
+                        </select>
                     </div>
                     <div className="lg:flex lg:flex-wrap pl-12 lg:pl-0 lg:justify-between">
                         {   
@@ -136,10 +140,10 @@ export const Shop = () => {
                                     </div>
                             </div>
                             :
-                            // <Pagination itemsPerPage={optionShow} products={products}/>
-                            products.map((item) => (
-                                <Card4 key={item.id} item={item} />
-                            ))
+                            <Pagination itemsPerPage={optionShow} products={products} />
+                            // products.map((item) => (
+                            //     <Card4 key={item.id} item={item} />
+                            // ))
                         }
                     </div>
 
