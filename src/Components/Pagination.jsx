@@ -21,7 +21,7 @@ export const Pagination = ({ itemsPerPage = 6, products = [] }) => {
         {currentItems.map((product) => (
           <Card4 key={product.id} item={product} />
         ))}
-      </div>
+      </div> 
       {pageCount > 1 && (
         <ReactPaginate
           breakLabel="..."

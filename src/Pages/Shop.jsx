@@ -5,8 +5,11 @@ import { List } from "../Components/List"
 import { ListItem } from "../Components/ListItem"
 import { IoIosArrowForward } from "react-icons/io";
 import { Card4 } from "../Components/Card4";
+import axios from "axios";
 import { Pagination } from "../Components/Pagination";
-// import Animate from '../Components/Animate';
+import { Skeleton } from "../Components/Skeleton";
+
+
 
 
 
@@ -14,48 +17,26 @@ import { Pagination } from "../Components/Pagination";
 
 export const Shop = () => {
 
-    const [optionShow, setOptionShow] = useState (6)
+   const [optionShow, setOptionShow] = useState (6);
+   const [loading, setLoading] = useState (true);
+   const [products, setProducts] = useState ([]);
+   
+
+    async function getAllProducts () {
+
+        let data = await axios.getAllProducts('https://dummyjson.com/products')
+        setProducts(data.data.products);
+        setLoading(false);        
+    }
 
 
-   const [loading, setLoading] = useState (true)
-   const [products, setProducts] = useState ([])
-
-    useEffect (  () => {
-        fetch('https://dummyjson.com/products')
-        .then(res => res.json())
-        .then( (data)=>{
-            setProducts(data.products);
-            setLoading (false);
-        });
-        
+    useEffect(()=>{
+        getAllProducts();
     }, [])
 
   return (
     <>  
-    {/* <div style={{ width: '100%', height: '600px', position: 'relative' }}>
-                <Animate
-                    colors={['#A6C8FF', '#5227FF', '#FF9FFC']}
-                    backgroundColor="#0A29FF"
-                    speed={0.5}
-                    streakCount={2}
-                    streakWidth={1}
-                    streakLength={1}
-                    glow={1}
-                    density={0.6}
-                    twinkle={1}
-                    zoom={3}
-                    backgroundGlow={0.5}
-                    opacity={1}
-                    mouseInteraction
-                    mouseStrength={0.5}
-                    mouseRadius={1}
-                    color1="#A6C8FF"
-                    color2="#EF4444"
-                    color3="#c20526"
-                />
-    </div> */}
-
-
+    
 
         <Container className="mt-10 mb-10">
             <BredCrumb/>
@@ -77,73 +58,23 @@ export const Shop = () => {
                 <div className="w-[75%]">
                     <div className="flex justify-end gap-2 pt-10 lg:pt-0">
                         <h5 className="mt-1.5">Show :</h5>
-                        <select
-                            className="py-2 px-3 mb-5"
-                            value={optionShow}
-                            onChange={(e) => setOptionShow(Number(e.target.value))}
-                        >
-                            <option value={6}>6</option>
-                            <option value={12}>12</option>
-                            <option value={18}>18</option>
-                            <option value={24}>24</option>
+                        <select onChange={(e) => setOptionShow (e.target.value)} id="#" className="py-1 px-2 border border-1">
+                            <option value={6}>3</option>
+                            <option value={12}>6</option>
+                            <option value={18}>9</option>
+                            <option value={24}>12</option>
                         </select>
                     </div>
                     <div className="lg:flex lg:flex-wrap pl-12 lg:pl-0 lg:justify-between">
                         {   
                             loading ?
 
-                            <div className="flex gap-0.5">
-                                    <div className="mx-auto w-full w-[300px]! min-h-[250px] rounded-md border border-blue-300 p-6">
-                                        <div className="flex animate-pulse space-x-4">
-                                            <div className="size-14 rounded-full bg-gray-200"></div>
-                                            <div className="flex-1 space-y-6 py-1">
-                                                <div className="h-3 rounded bg-gray-200"></div>
-                                                <div className="space-y-3">
-                                                    <div className="grid grid-cols-3 gap-4">
-                                                        <div className="col-span-2 h-3 rounded bg-gray-200"></div>
-                                                        <div className="col-span-1 h-3 rounded bg-gray-200"></div>
-                                                    </div>
-                                                    <div className="h-3 rounded bg-gray-200"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="mx-auto w-full w-[300px]! min-h-[250px] rounded-md border border-blue-300 p-6">
-                                        <div className="flex animate-pulse space-x-4">
-                                            <div className="size-14 rounded-full bg-gray-200"></div>
-                                            <div className="flex-1 space-y-6 py-1">
-                                                <div className="h-3 rounded bg-gray-200"></div>
-                                                <div className="space-y-3">
-                                                    <div className="grid grid-cols-3 gap-4">
-                                                        <div className="col-span-2 h-3 rounded bg-gray-200"></div>
-                                                        <div className="col-span-1 h-3 rounded bg-gray-200"></div>
-                                                    </div>
-                                                    <div className="h-3 rounded bg-gray-200"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="mx-auto w-full w-[300px]! min-h-[250px] rounded-md border border-blue-300 p-6">
-                                        <div className="flex animate-pulse space-x-4">
-                                            <div className="size-14 rounded-full bg-gray-200"></div>
-                                            <div className="flex-1 space-y-6 py-1">
-                                                <div className="h-3 rounded bg-gray-200"></div>
-                                                <div className="space-y-3">
-                                                    <div className="grid grid-cols-3 gap-4">
-                                                        <div className="col-span-2 h-3 rounded bg-gray-200"></div>
-                                                        <div className="col-span-1 h-3 rounded bg-gray-200"></div>
-                                                    </div>
-                                                    <div className="h-3 rounded bg-gray-200"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                            </div>
+                                Array.from({length:6}).map((_, index)=> <Skeleton key={index}/> )
                             :
-                            <Pagination itemsPerPage={optionShow} products={products} />
-                            // products.map((item) => (
-                            //     <Card4 key={item.id} item={item} />
-                            // ))
+                            // <Pagination itemsPerPage={optionShow} products={products} />
+                            products.map((item) => (
+                                <Card4 key={item.id} item={item} />
+                            ))
                         }
                     </div>
 
