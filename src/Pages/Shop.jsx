@@ -59,22 +59,22 @@ export const Shop = () => {
                     <div className="flex justify-end gap-2 pt-10 lg:pt-0">
                         <h5 className="mt-1.5">Show :</h5>
                         <select onChange={(e) => setOptionShow (e.target.value)} id="#" className="py-1 px-2 border border-1">
-                            <option value={6}>3</option>
-                            <option value={12}>6</option>
-                            <option value={18}>9</option>
-                            <option value={24}>12</option>
+                            <option value={3}>3</option>
+                            <option value={6}>6</option>
+                            <option value={9}>9</option>
+                            <option value={12}>12</option>
                         </select>
                     </div>
                     <div className="lg:flex lg:flex-wrap pl-12 lg:pl-0 lg:justify-between">
                         {   
                             loading ?
 
-                                Array.from({length:6}).map((_, index)=> <Skeleton key={index}/> )
+                                Array.from({length: optionShow}).map((_, index)=> <Skeleton key={index}/> )
                             :
-                            // <Pagination itemsPerPage={optionShow} products={products} />
-                            products.map((item) => (
-                                <Card4 key={item.id} item={item} />
-                            ))
+                            <Pagination itemsPerPage={optionShow} products={products} />
+                            // products.map((item) => (
+                            //     <Card4 key={item.id} item={item} />
+                            // ))
                         }
                     </div>
 
