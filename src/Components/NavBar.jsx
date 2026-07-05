@@ -50,7 +50,7 @@ export const NavBar = () => {
                   <Link to="/shop">Shop</Link>
                 </ListItem>
                 <ListItem className="customize">
-                  <Link to="/singuup">SingUp</Link>
+                  <Link to="/singup">SingUp</Link>
                 </ListItem>
                 
               </List>
