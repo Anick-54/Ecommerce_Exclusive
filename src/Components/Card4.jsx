@@ -35,6 +35,7 @@ export const Card4 = ({item}) => {
         </div>
         <div className="#">
             <h2 className="font-medium pt-4 text-[16px] font-poppins">{item.title}</h2>
+            <p className="text-sm text-gray-600 font-poppins">{item?.category || 'No category'}</p>
             <div className="flex gap-3">
                 <h2 className="text-primary font-bold py-2 font-poppins text-[16px]">${formattedPrice}</h2>
                 <h2 className="text-secondary font-bold py-2 font-poppins text-[16px] line-through">${originalPrice}</h2>

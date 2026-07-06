@@ -61,7 +61,6 @@ export const Pagination = ({ itemsPerPage }) => {
           >
             &lt;
           </button>
-
           {getPageNumbers().map((page, index) =>
             page === '...' ? (
               <span key={`dots-${index}`} className="px-2 text-gray-400">
