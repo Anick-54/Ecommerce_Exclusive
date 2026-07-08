@@ -80,7 +80,6 @@ export const Pagination = ({ itemsPerPage }) => {
               </button>
             )
           )}
-
           <button
             onClick={() => goToPage(currentPage + 1)}
             disabled={currentPage === pageCount}
