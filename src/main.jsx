@@ -13,7 +13,6 @@ import { SingUp } from './Pages/SingUp';
 
 
 
-
 const router = createBrowserRouter([
   {
     path: "/",
