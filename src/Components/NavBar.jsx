@@ -25,7 +25,7 @@ export const NavBar = () => {
       <Container>
         <Flex className="flex-wrap lg:justify-betwee items-center">
           <div className="px-2 w-[25%]">
-            <img src={Logo} alt="#"/>
+            <Link to="/"><img src={Logo} alt="#"/></Link>
           </div>
           <div>
             <div className="lg:hidden block w-[50%]">
