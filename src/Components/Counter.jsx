@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 export const Counter = ({className}) => {
 
 
-    const conduct_date = '2026-06-30 16:54:00';
+    const conduct_date = '2026-07-30 16:54:00';
 
     const [count, setCount] = useState({});
 
