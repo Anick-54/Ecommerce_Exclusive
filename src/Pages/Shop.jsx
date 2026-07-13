@@ -11,6 +11,8 @@ import { useDispatch } from 'react-redux'
 import { ProductReducer} from "../Slices/ProductSlice";
 
 
+
+
 export const Shop = () => {
 
   const [optionShow, setOptionShow] = useState(12);
