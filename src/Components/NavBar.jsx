@@ -62,7 +62,9 @@ export const NavBar = () => {
               </div>
               
               <div className="flex items-center gap-4 text-3xl">
-                <Link to ="favarite"><IoMdHeartEmpty / ></Link>
+                <Link to={'/favariteproducts'}>
+                <IoMdHeartEmpty / >
+                </Link>
                 <Link to="cart"><IoCartOutline /></Link>
               </div>
             </div>

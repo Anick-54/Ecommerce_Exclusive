@@ -4,6 +4,7 @@ import S1 from "../assets/S1.png"
 import S2 from "../assets/S2.png"
 import S3 from "../assets/S3.png"
 import { FaLongArrowAltUp } from "react-icons/fa";
+import { Link } from "react-router"
 
 
 
@@ -41,9 +42,15 @@ export const Free = () => {
             </div>
             
         </Flex>
+        
         <div className="w-[46px] h-[46px] rounded-full bg-secondary ml-290 mb-8 mt-15.5 relative hover:bg-primary hover:text-white cursor-pointer">
+            <Link to="">
             <FaLongArrowAltUp className="absolute top-2.5 left-3 text-2xl"/>
+            </Link>
+            
+
         </div>
+        
     </Container>
    </>
   )

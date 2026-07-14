@@ -2,6 +2,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { FiEye } from "react-icons/fi";
 import { Button } from "./Button";
 import { FaStar } from "react-icons/fa";
+import { Link } from "react-router";
 
 
 
@@ -9,7 +10,7 @@ import { FaStar } from "react-icons/fa";
 
 export const Card = ({img, heading, price, rating, discount, prices}) => {
   return (
-    <>
+    <><Link>
     <div className="w-[270px] group cursor-pointer">
         <div className="bg-[#F5F5F5] relative overflow-hidden">
             <div className="h-[250px] flex justify-center items-center">
@@ -42,7 +43,7 @@ export const Card = ({img, heading, price, rating, discount, prices}) => {
         </div>
 
     </div>
-
+    </Link>
 
 
     </>

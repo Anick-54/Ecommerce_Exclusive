@@ -5,6 +5,7 @@ import { FiEye } from "react-icons/fi";
 import { Button } from "./Button";
 import { FaStar } from "react-icons/fa";
 import { Flex, Rate } from 'antd';
+import { Link } from "react-router";
 
 
 
@@ -16,7 +17,7 @@ export const Card4 = ({item}) => {
   const formattedPrice = price.toFixed(2);
 
   return (
-    <>
+    <><Link>
     <div className="w-[270px] group cursor-pointer">
         <div className="bg-[#F5F5F5] relative overflow-hidden">
             <div className="h-[250px] flex justify-center items-center">
@@ -52,7 +53,7 @@ export const Card4 = ({item}) => {
         </div>
 
     </div>
-
+   </Link>
 
 
     </>

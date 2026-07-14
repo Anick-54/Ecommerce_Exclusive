@@ -10,6 +10,7 @@ import { Provider } from 'react-redux'
 import { store } from './store';
 import { Contact } from './Pages/Contact'
 import { SingUp } from './Pages/SingUp';
+import { FavariteProducts } from './Pages/FavariteProducts';
 
 
 
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
       { path: "shop", Component: Shop },
       { path: "contact", Component: Contact },
       { path: "singup", Component: SingUp  },
+      { path: "favariteproducts", Component: FavariteProducts  },
       
     ],
   },
