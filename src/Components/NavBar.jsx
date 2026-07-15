@@ -52,7 +52,6 @@ export const NavBar = () => {
                 <ListItem className="customize">
                   <Link to="/singup">SingUp</Link>
                 </ListItem>
-                
               </List>
             </div>
             <div className="flex-wrap lg:flex gap-6 items-center">
