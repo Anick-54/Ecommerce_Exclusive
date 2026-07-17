@@ -17,7 +17,8 @@ export const Card4 = ({item}) => {
   const formattedPrice = price.toFixed(2);
 
   return (
-    <><Link>
+    <><Link to={`/productdetails/${item.id}`}>
+
     <div className="w-[270px] group cursor-pointer">
         <div className="bg-[#F5F5F5] relative overflow-hidden">
             <div className="h-[250px] flex justify-center items-center">

@@ -11,6 +11,7 @@ import { store } from './store';
 import { Contact } from './Pages/Contact'
 import { SingUp } from './Pages/SingUp';
 import { FavariteProducts } from './Pages/FavariteProducts';
+import { ProductDetails } from './Pages/ProductDetails';
 
 
 
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
       { path: "contact", Component: Contact },
       { path: "singup", Component: SingUp  },
       { path: "favariteproducts", Component: FavariteProducts  },
+      { path: "productdetails/:id", Component: ProductDetails  },
       
     ],
   },
