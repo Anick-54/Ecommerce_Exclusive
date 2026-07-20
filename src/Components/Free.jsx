@@ -4,7 +4,7 @@ import S1 from "../assets/S1.png"
 import S2 from "../assets/S2.png"
 import S3 from "../assets/S3.png"
 import { FaLongArrowAltUp } from "react-icons/fa";
-import { Link } from "react-router"
+import { Link } from "react-router-dom"
 
 
 

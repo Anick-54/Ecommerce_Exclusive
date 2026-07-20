@@ -1,13 +1,15 @@
-import { Link, useParams } from "react-router"
+import { Link, useParams } from "react-router-dom"
 import { FaArrowAltCircleLeft } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { CartReducer } from "../Cart/CartSlice";
 
 
 
 
 
 export const ProductDetails = () => {
+  const dispatch = useDispatch();
 
   const { id } = useParams();
 
@@ -61,7 +63,7 @@ export const ProductDetails = () => {
             <h3 className="font-semibold font-poppins mb-2">Category</h3>
             <span className="bg-zinc-200 rounded font-bold mb-2">{item.category}</span>
           </div>
-          <button className="w-full md:w-50 bg-zinc-200 rounded-md flex items-center justify-center gap-2 hover:bg-black hover:text-white cursor-pointer duration-500 ease-linear">
+          <button onClick={() => dispatch(CartReducer(item))} className="w-full md:w-50 bg-zinc-200 rounded-md flex items-center justify-center gap-2 hover:bg-black hover:text-white cursor-pointer duration-500 ease-linear">
             <FiShoppingCart />
             Add to Cart
           </button>

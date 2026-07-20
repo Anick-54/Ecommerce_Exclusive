@@ -2,7 +2,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { FiEye } from "react-icons/fi";
 import { Button } from "./Button";
 import { FaStar } from "react-icons/fa";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 
 

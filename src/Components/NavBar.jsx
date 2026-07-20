@@ -9,10 +9,15 @@ import { IoSearch } from "react-icons/io5";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import { useSelector } from "react-redux"
 
 
 
 export const NavBar = () => {
+
+
+  const cartItems = useSelector ((state)=> state.cart.items);
+  const itemCout= cartItems.reduce((total, item)=> total + item.quantity, 0);
 
   
   const[show, setShow] = useState(false)
@@ -64,7 +69,12 @@ export const NavBar = () => {
                 <Link to={'/favariteproducts'}>
                 <IoMdHeartEmpty / >
                 </Link>
-                <Link to="cart"><IoCartOutline /></Link>
+                <div className="relative">
+                  <Link to={'/cart'}>
+                    <IoCartOutline />
+                    {itemCout > 0 && (<span className="absolute top-2 right-2 bg-primary text-white rounded-full w-5 h-5 text-sx">{itemCout}</span>)}
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

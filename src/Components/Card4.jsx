@@ -5,7 +5,7 @@ import { FiEye } from "react-icons/fi";
 import { Button } from "./Button";
 import { FaStar } from "react-icons/fa";
 import { Flex, Rate } from 'antd';
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 
 
