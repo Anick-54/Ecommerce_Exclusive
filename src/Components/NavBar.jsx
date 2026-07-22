@@ -72,7 +72,7 @@ export const NavBar = () => {
                 <div className="relative">
                   <Link to={'/cart'}>
                     <IoCartOutline />
-                    {itemCout > 0 && (<span className="absolute top-2 right-2 bg-primary text-white rounded-full w-5 h-5 text-sx">{itemCout}</span>)}
+                    {itemCout > 0 && (<span className="absolute left-4.5 bottom-6 bg-primary text-white rounded-full w-5 h-5 text-[16px] items-center text-center ">{itemCout}</span>)}
                   </Link>
                 </div>
               </div>
