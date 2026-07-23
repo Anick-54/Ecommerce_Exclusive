@@ -3,6 +3,7 @@ import { FaArrowAltCircleLeft } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
 import { CartReducer } from "../Cart/CartSlice";
+import { BredCrumb } from "../Components/BredCrumb";
 
 
 
@@ -37,8 +38,10 @@ export const ProductDetails = () => {
 
 
   return (
-    <div className="container mx-auto px-4 py-8 mb-50">
-      <div className="flex">
+    <> 
+      <div className="container mx-auto px-4 py-8 mb-50">
+        <BredCrumb/>
+      <div className="flex mt-10">
         <Link to="/shop" className="mb-8 inline-block font-poppins font-bold">
           <div className="flex gap-2 items-center">
             <FaArrowAltCircleLeft />
@@ -63,12 +66,13 @@ export const ProductDetails = () => {
             <h3 className="font-semibold font-poppins mb-2">Category</h3>
             <span className="bg-zinc-200 rounded font-bold mb-2">{item.category}</span>
           </div>
-          <button onClick={() => dispatch(CartReducer(item))} className="w-full md:w-50 bg-zinc-200 rounded-md flex items-center justify-center gap-2 hover:bg-black hover:text-white cursor-pointer duration-500 ease-linear">
+          <button onClick={() => dispatch(CartReducer(item))} className="w-full h-10 md:w-50 bg-zinc-200 rounded-md flex items-center justify-center gap-2 hover:bg-black hover:text-white cursor-pointer duration-500 ease-linear">
             <FiShoppingCart />
             Add to Cart
           </button>
         </div>
       </div>
     </div>
+    </>
   );
 }
