@@ -16,11 +16,20 @@ export const Cartslice = createSlice({
         state.items.push({ ...action.payload, quantity: 1 });
       }
     },
-    
+    removeReducer: (state, action) =>{
+      state.items = state.items.filter((item)=> item.id ===action.payload.id)
+    },
+    updateReducer: (state, action) =>{
+      const item = state.item.find((item)=> item.id === action.payload.id);
+      if(item) {
+        item.quantity = action.payload.quantity;
+      }
+
+    },
   },
 })
 
 
-export const {  CartReducer } = Cartslice.actions
+export const {  CartReducer, removeReducer, updateReducer } = Cartslice.actions
 
 export default Cartslice.reducer
