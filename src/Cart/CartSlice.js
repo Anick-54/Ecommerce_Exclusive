@@ -17,10 +17,10 @@ export const Cartslice = createSlice({
       }
     },
     removeReducer: (state, action) =>{
-      state.items = state.items.filter((item)=> item.id ===action.payload.id)
+      state.items = state.items.filter((item)=> item.id === action.payload.id);
     },
     updateReducer: (state, action) =>{
-      const item = state.item.find((item)=> item.id === action.payload.id);
+      const item = state.items.find((item)=> item.id === action.payload.id);
       if(item) {
         item.quantity = action.payload.quantity;
       }

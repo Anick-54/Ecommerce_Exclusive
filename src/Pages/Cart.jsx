@@ -53,13 +53,14 @@ export const Cart = () => {
                 alt={item.title} className='w-24 h-24 object-cover rounded'/>
                 </Link>
                 <div className='flex-1'>
-                  <Link to={`/allProducts/${item.id}`} className='font-semibold font-inter'>
+                  <Link to={`/allProducts/${item.id}`} className='font-semibold font-inter hover:text-green-700'>
                   {item.title}
                   </Link>
                   <p className=' text-gray-600 font-inter'>${item.price}</p>
                   <div className='flex items-center gap-2 mt-2'>
                     <button className='p-1 rounded-full hover:bg-gray-100 cursor-pointer'
                       onClick={() => {
+                       
                         dispatch(
                           updateReducer({
                           id: item.id,
@@ -72,15 +73,17 @@ export const Cart = () => {
                     <button className='p-1 rounded-full hover:bg-gray-100 cursor-pointer'
                      onClick={()=> dispatch(
                       updateReducer({
-                        id:item.id, 
+                        id: item.id, 
                         quantity: Math.max(0, item.quantity + 1),}))} 
                         > <FaPlus size={16}/></button>
-                    <div className='text-red-500 hover:text-red-700 cursor-pointer'>
+                    <div className='text-red-500 hover:text-red-700 cursor-pointer' onClick={()=>dispatch(removeReducer(item.id))}>
                       <FaTrashAlt size={20} />
                     </div>
                   </div>
-                  
                 </div>
+                <div className='font-bold'>
+                    <p>${(item.price * item.quantity).toFixed(2)}</p>
+                  </div>
               </div>))}
             
           </div>
