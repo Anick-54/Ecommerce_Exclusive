@@ -24,6 +24,15 @@ export const NavBar = () => {
   const handleClick =()=>{
     setShow(!show)
   }
+  const handleSearch = (e) =>{
+    e.target.value('');
+   
+    
+    
+  }
+
+
+
   return (
     <> 
     <nav className="pt-4 lg:pt-10 pb-4 border-b-1 border-[#b3b3b3] relative">
@@ -34,7 +43,7 @@ export const NavBar = () => {
           </div>
           <div>
             <div className="lg:hidden block w-[50%]">
-                <input type="text" className="bg-[#F5F5F5] text-black py-2 pl-5 pr-3 text-sm " placeholder=""/>
+                <input type="search" onChange={handleSearch} className="bg-[#F5F5F5] text-black py-2 pl-5 pr-8 text-sm " placeholder=""/>
                 <IoSearch  className="absolute top-5.5 right-20 text-black lg:right-2.5 text-2xl"/>
               </div>
           </div>
