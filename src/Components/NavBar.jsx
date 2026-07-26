@@ -10,6 +10,7 @@ import { FaBarsStaggered } from "react-icons/fa6";
 import { useState } from "react"
 import { Link } from "react-router-dom"
 import { useSelector } from "react-redux"
+import Search from "antd/es/transfer/search"
 
 
 
@@ -24,11 +25,23 @@ export const NavBar = () => {
   const handleClick =()=>{
     setShow(!show)
   }
+
+
+
+  const products = useSelector((state)=>state.allProducts.value);
+
+  const [search, setSearch] = useState('');
+  const [filteredProduct, setfilteredProduct] = useState([]);
+
+
   const handleSearch = (e) =>{
-    e.target.value('');
-   
-    
-    
+    const value = e.target.value;
+    setSearch(value);
+
+    if(value.trim() === ''){
+      setfilteredProduct([]);
+    }
+  
   }
 
 
@@ -43,7 +56,11 @@ export const NavBar = () => {
           </div>
           <div>
             <div className="lg:hidden block w-[50%]">
-                <input type="search" onChange={handleSearch} className="bg-[#F5F5F5] text-black py-2 pl-5 pr-8 text-sm " placeholder=""/>
+                <input type="search"
+                 value={search} 
+                 onChange={handleSearch} 
+                 className="bg-[#F5F5F5] text-black py-2 pl-5 pr-8 text-sm " placeholder=""/>
+
                 <IoSearch  className="absolute top-5.5 right-20 text-black lg:right-2.5 text-2xl"/>
               </div>
           </div>
