@@ -8,9 +8,9 @@ import { IoMdHeartEmpty } from "react-icons/io";
 import { IoSearch } from "react-icons/io5";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux"
-import Search from "antd/es/transfer/search"
+
 
 
 
@@ -27,11 +27,12 @@ export const NavBar = () => {
   }
 
 
-
+            // Filtering Products
   const products = useSelector((state)=>state.allProducts.value);
+  const navigate = useNavigate();
 
   const [search, setSearch] = useState('');
-  const [filteredProduct, setfilteredProduct] = useState([]);
+  const [filteredProduct, setFilteredProduct] = useState([]);
 
 
   const handleSearch = (e) =>{
@@ -39,7 +40,9 @@ export const NavBar = () => {
     setSearch(value);
 
     if(value.trim() === ''){
-      setfilteredProduct([]);
+      setFilteredProduct([]);
+    }else{
+      setFilteredProduct(products.filter((item)=> item.title.toLoweCase(). includes(value.toLoweCase())));  
     }
   
   }
@@ -64,6 +67,22 @@ export const NavBar = () => {
                 <IoSearch  className="absolute top-5.5 right-20 text-black lg:right-2.5 text-2xl"/>
               </div>
           </div>
+          {
+            filteredProduct.map((item)=>(
+              <div className="p-2 border-b flex items-center gap-4"
+              onClick={()=>{
+                  navigate(`/productdetails/${item.id}`);
+                  setSearch("")
+                  setFilteredProduct([])
+
+                }}
+              >
+                <img src={item.thumbnail} alt="image" />
+                {item.title}
+                
+              </div>
+            ))
+          }
           <div className={`${show ? "block" : "hidden"} lg:flex items-center justify-between lg:w-[75%] absolute top-15 lg:static z-20 lg:bg-transparent bg-black text-white lg:text-black
            w-full px-2`}>
             <div>
