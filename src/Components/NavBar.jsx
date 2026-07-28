@@ -13,7 +13,6 @@ import { useSelector } from "react-redux"
 
 
 
-
 export const NavBar = () => {
 
 
@@ -33,7 +32,6 @@ export const NavBar = () => {
 
   const [search, setSearch] = useState('');
   const [filteredProduct, setFilteredProduct] = useState([]);
-
 
   const handleSearch = (e) =>{
     const value = e.target.value;
