@@ -15,7 +15,6 @@ import { useSelector } from "react-redux"
 
 
 
-
 export const NavBar = () => {
 
 
@@ -47,7 +46,6 @@ export const NavBar = () => {
     }
   
   }
-
 
 
   return (
