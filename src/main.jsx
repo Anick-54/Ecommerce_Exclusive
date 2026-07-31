@@ -13,6 +13,7 @@ import { SingUp } from './Pages/SingUp';
 import { FavariteProducts } from './Pages/FavariteProducts';
 import { ProductDetails } from './Pages/ProductDetails';
 import { Cart } from './Pages/Cart';
+import { LogIn } from './Pages/LogIn';
 
 
 
@@ -29,6 +30,7 @@ const router = createBrowserRouter([
       { path: "favariteproducts", Component: FavariteProducts  },
       { path: "productdetails/:id", Component: ProductDetails  },
       { path: "cart", Component: Cart },
+      {path: "login", Component: LogIn},
       
     ],
   },
