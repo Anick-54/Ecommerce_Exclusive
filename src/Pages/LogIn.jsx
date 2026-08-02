@@ -27,11 +27,11 @@ export const LogIn = () => {
 
             </div> */}
             <div className="mt-10 mb-10">
-              <input type="email" placeholder="Email Or Phone Number" className="w-[370px] h-8 border-b" />
+              <input type="email" placeholder="Email Or Phone Number" className="w-[370px] h-8 border-b focus:outline-none" />
 
             </div>
             <div>
-              <input type="password" placeholder="Password" className="w-[370px] h-8 border-b" />
+              <input type="password" placeholder="Password" className="w-[370px] h-8 border-b focus:outline-none" />
 
             </div>
             <div className="flex justify-between mt-10 ">

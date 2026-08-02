@@ -14,6 +14,7 @@ import { FavariteProducts } from './Pages/FavariteProducts';
 import { ProductDetails } from './Pages/ProductDetails';
 import { Cart } from './Pages/Cart';
 import { LogIn } from './Pages/LogIn';
+import FireBaseConfig from '../src/FireBaseConfig';
 
 
 

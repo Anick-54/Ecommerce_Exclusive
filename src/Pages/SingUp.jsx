@@ -2,10 +2,44 @@ import { BredCrumb } from "../Components/BredCrumb"
 import { Container } from "../Components/Container"
 import S from "../assets/SU.png"
 import Goole from "../assets/Google.png"
-import { Link } from "react-router"
+import { Link } from "react-router-dom"
+import { useState } from "react"
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 
 export const SingUp = () => {
+
+
+
+
+  const [name,setName] = useState ('')
+  const [email,setEmail] = useState ('')
+  const [password,setPassword] = useState ('')
+
+  const handleClick = (e) => {
+    if(name && email && password){
+      const auth = getAuth();
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          // Signed up 
+          const user = userCredential.user;
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          // ..
+        });
+    }
+  }
+ 
+
+
+
+
+
+
+
   return (
     <>
       <Container className="mt-10 ">
@@ -23,18 +57,18 @@ export const SingUp = () => {
               <p className="text-[16px] mb-12">Enter your details below</p>
             </div>
             <div>
-              <input type="text" placeholder="Enter Your Name" className="w-[370px] h-8 border-b" />
+              <input type="text" placeholder="Enter Your Name" className="w-[370px] h-8 border-b focus:outline-none" onChange={(e) => setName (e.currentTarget.value)} />
 
             </div>
             <div className="mt-10 mb-10">
-              <input type="email" placeholder="Email Or Phone Number" className="w-[370px] h-8 border-b" />
+              <input type="email" placeholder="Email Or Phone Number" className="w-[370px] h-8 border-b focus:outline-none" onChange={(e) => setEmail (e.currentTarget.value)}/>
 
             </div>
             <div>
-              <input type="password" placeholder="Password" className="w-[370px] h-8 border-b" />
+              <input type="password" placeholder="Password" className="w-[370px] h-8 border-b focus:outline-none" onChange={(e) => setPassword (e.currentTarget.value)}/>
 
             </div>
-            <button className="w-[371px] h-14 bg-primary text-white rounded-md mt-10 cursor-pointer hover:bg-red-700">Create Account</button>
+            <button className="w-[371px] h-14 bg-primary text-white rounded-md mt-10 cursor-pointer hover:bg-red-700" onClick={handleClick}>Create Account</button>
 
             <button className="mt-10 mb-10  w-[371px] h-14 border-1 border-secondary rounded-md hover:bg-secondary cursor-pointer ">
               <div className="flex justify-center gap-4">
@@ -49,7 +83,7 @@ export const SingUp = () => {
               
             </button>
             <div className="text-center">
-                <h4>Already have account? <Link to="/login"><span className="border-b">Log in</span></Link></h4>
+                <h4>Already have account? <Link to="/login"><span className="border-b font-semibold">Log in</span></Link></h4>
             </div>
           </div>
         </div>
