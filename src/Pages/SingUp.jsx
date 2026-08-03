@@ -2,9 +2,9 @@ import { BredCrumb } from "../Components/BredCrumb"
 import { Container } from "../Components/Container"
 import S from "../assets/SU.png"
 import Goole from "../assets/Google.png"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react"
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 
 
 export const SingUp = () => {
@@ -16,19 +16,30 @@ export const SingUp = () => {
   const [email,setEmail] = useState ('')
   const [password,setPassword] = useState ('')
 
+  const navigate = useNavigate();
+
   const handleClick = (e) => {
     if(name && email && password){
       const auth = getAuth();
       createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-          // Signed up 
           const user = userCredential.user;
-          // ...
+          return updateProfile(user, {          
+            displayName: name,
+            
+          });
+          
+          
+        })
+        .then(() => {
+          
+          
+          navigate("/login");
         })
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
-          // ..
+          console.error(errorCode, errorMessage);
         });
     }
   }
@@ -37,8 +48,7 @@ export const SingUp = () => {
 
 
 
-
-
+  
 
   return (
     <>
