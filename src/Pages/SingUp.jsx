@@ -32,10 +32,9 @@ export const SingUp = () => {
           
         })
         .then(() => {
-          
-          
           navigate("/login");
         })
+
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
@@ -48,7 +47,7 @@ export const SingUp = () => {
 
 
 
-  
+
 
   return (
     <>
