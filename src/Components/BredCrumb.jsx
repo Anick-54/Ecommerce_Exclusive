@@ -12,7 +12,7 @@ export const BredCrumb = ({className}) => {
         {pathSegments.map((segment, index) => (
           <span key={`${segment}-${index}`} className="flex items-center gap-2">
             <span>/</span>
-            <h2 className="capitalize">{segment.replace(/-/g, " ")}</h2>
+            <h2 className="capitalize ">{segment.replace(/-/g, " ")}</h2>
           </span>
         ))}
         {className}

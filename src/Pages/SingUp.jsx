@@ -4,7 +4,7 @@ import S from "../assets/SU.png"
 import Goole from "../assets/Google.png"
 import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react"
-import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification  } from "firebase/auth";
 
 
 export const SingUp = () => {
@@ -19,26 +19,34 @@ export const SingUp = () => {
   const navigate = useNavigate();
 
   const handleClick = (e) => {
+    
     if(name && email && password){
       const auth = getAuth();
       createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          const user = userCredential.user;
-          return updateProfile(user, {          
-            displayName: name,
-            
-          });
-          
-          
+        .then((userCredential) =>{
+          sendEmailVerification(auth.currentUser).then(()=>{
+            updateProfile(auth.currentUser, {
+              displayName:name,
+            })
+            .then(()=>{
+              const user = userCredential.user;
+              console.log(user);
+              
+              navigate("/login");
+            })
+            .catch((error)=>{
+              console.log(error);
+              
+            })
+          })
         })
-        .then(() => {
-          navigate("/login");
-        })
-
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
-          console.error(errorCode, errorMessage);
+          console.log(errorCode);
+          console.log(errorMessage);
+          
+          
         });
     }
   }
