@@ -43,7 +43,7 @@ export const SingUp = () => {
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
-          console.log(errorCode);
+          alert('fil the all ');
           console.log(errorMessage);
           
           
@@ -53,9 +53,7 @@ export const SingUp = () => {
  
 
 
-
-
-
+  
 
   return (
     <>
