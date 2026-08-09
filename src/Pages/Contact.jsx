@@ -10,8 +10,8 @@ export const Contact = () => {
     <>
     <Container className='mt-10'>
       <BredCrumb/>
-      <div className="mt-20 mb-[140px] flex gap-[30px]">
-        <div className="w-[340px]">
+      <div className="mt-20 mb-[140px] lg:flex gap-[30px]">
+        <div className="w-[340px] pl-12 lg:pl-0">
           <div className="flex gap-4 items-center">
             <div className="w-10 h-10 rounded-full bg-primary relative">
               <IoCall className="absolute top-3 left-3 text-white"/>
@@ -38,7 +38,7 @@ export const Contact = () => {
           <h4 className="text-14px">Emails: support@exclusive.com</h4>
         </div>
         <div className="w-[737px]">
-          <div className="flex gap-4 text-center">
+          <div className="lg:flex gap-4 text-center mt-5 pl-12 lg:pl-0">
             <div className="w-[235px] h-[50px] bg-gray-100 pt-2.5">
               <input type="text" placeholder="Your Name *" className="focus outline-none" />
             </div>
