@@ -2,13 +2,37 @@ import { Outlet } from "react-router-dom"
 import { Header } from "./Components/Header"
 import { NavBar } from "./Components/NavBar"
 import { Footer } from "./Components/Footer"
+import { useEffect, useState } from "react"
 
 export const RootLayOut = () => {
+
+ const [isloading, setIsLoading] = useState(true)
+
+  useEffect(()=>{
+   const time = setTimeout(() => {
+      setIsLoading(false)
+    }, 3000);
+
+
+
+    return () => clearTimeout(time);
+  } ,[])
+
+
+  console.log('dddddd dddd dd')
+
+
+  if(isloading) {
+    return <p className='text-red-500'>loading....</p>
+  }
+
   return (
     <div>
-        <Header/>
+       <div className="sticky top-0 z-[9999] bg-white">
+         <Header/>
         <NavBar/>
-        <Outlet />
+       </div>
+        <Outlet/>
         <Footer/>
     </div>
   )

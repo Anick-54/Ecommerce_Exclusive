@@ -13,7 +13,7 @@ export const Header = () => {
     }
   return (
    <>
-    <header className="bg-black py-3 px-2 lg:px-0">
+    <header className="bg-black py-3 px-2 lg:px-0 ">
         <Container>
             <Flex className="justify-between items-center">   
                 <div className="text-white text-center w-full lg:w-[90%] text-sm">
