@@ -11,7 +11,7 @@ export const RootLayOut = () => {
   useEffect(()=>{
    const time = setTimeout(() => {
       setIsLoading(false)
-    }, 3000);
+    }, );
 
 
 
@@ -19,7 +19,7 @@ export const RootLayOut = () => {
   } ,[])
 
 
-  console.log('dddddd dddd dd')
+  
 
 
   if(isloading) {
