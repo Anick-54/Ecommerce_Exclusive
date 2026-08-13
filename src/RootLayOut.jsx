@@ -11,7 +11,7 @@ export const RootLayOut = () => {
   useEffect(()=>{
    const time = setTimeout(() => {
       setIsLoading(false)
-    }, );
+    }, 2000);
 
 
 
@@ -20,7 +20,6 @@ export const RootLayOut = () => {
 
 
   
-
 
   if(isloading) {
     return <p className='text-red-500'>loading....</p>
