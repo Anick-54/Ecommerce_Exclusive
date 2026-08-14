@@ -3,6 +3,7 @@ import { Header } from "./Components/Header"
 import { NavBar } from "./Components/NavBar"
 import { Footer } from "./Components/Footer"
 import { useEffect, useState } from "react"
+import { Container } from "./Components/Container"
 
 export const RootLayOut = () => {
 
@@ -18,13 +19,13 @@ export const RootLayOut = () => {
     return () => clearTimeout(time);
   } ,[])
 
-
   
 
   if(isloading) {
-    return <p className='text-red-500'>loading....</p>
+    return <Container>
+      <p className='text-primary font-bold font-poppins flex items-center text-[64px] mt-20'>Loading....</p>
+    </Container>
   }
-
   return (
     <div>
        <div className="sticky top-0 z-[9999] bg-white">
