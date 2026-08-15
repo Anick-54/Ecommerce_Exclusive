@@ -5,6 +5,10 @@ import { Footer } from "./Components/Footer"
 import { useEffect, useState } from "react"
 import { Container } from "./Components/Container"
 
+
+
+
+
 export const RootLayOut = () => {
 
  const [isloading, setIsLoading] = useState(true)
@@ -15,12 +19,10 @@ export const RootLayOut = () => {
     }, 2000);
 
 
-
     return () => clearTimeout(time);
   } ,[])
 
   
-
   if(isloading) {
     return <Container>
       <p className='text-primary font-bold font-poppins flex items-center text-[64px] mt-20'>Loading....</p>
