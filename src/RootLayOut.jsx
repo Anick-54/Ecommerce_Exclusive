@@ -9,25 +9,32 @@ import { Container } from "./Components/Container"
 
 
 
+
+
+
 export const RootLayOut = () => {
 
- const [isloading, setIsLoading] = useState(true)
+//  const [isloading, setIsLoading] = useState(true)
 
-  useEffect(()=>{
-   const time = setTimeout(() => {
-      setIsLoading(false)
-    }, 2000);
+//   useEffect(()=>{
+//    const time = setTimeout(() => {
+//       setIsLoading(false)
+//     }, 2000);
 
 
-    return () => clearTimeout(time);
-  } ,[])
+//     return () => clearTimeout(time);
+//   } ,[])
 
   
-  if(isloading) {
-    return <Container>
-      <p className='text-primary font-bold font-poppins flex items-center text-[64px] mt-20'>Loading....</p>
-    </Container>
-  }
+//   if(isloading) {
+//     return <Container>
+//         <div>
+//           <div className="mt-50">
+//             <h2 className="text-[42px] font-bold font-poppins text-purple-800 text-center">Please Wait For The Details...</h2>
+//           </div>
+//         </div>
+//     </Container>
+//   }
   return (
     <div>
        <div className="sticky top-0 z-[9999] bg-white">
