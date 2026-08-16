@@ -1,22 +1,9 @@
-import { useState } from "react";
-import { BounceLoader } from "react-spinners";
+import { MorphingInfinity } from "@/components/ui/morphing-infinity";
 
-function Spinner() {
-  let [loading, setLoading] = useState(true);
-  let [color, setColor] = useState("#ffffff");
-
+export default function MorphingInfinityDemo() {
   return (
-    <div className="sweet-loading">
-      <button onClick={() => setLoading(!loading)}>Toggle Loader</button>
-      <input
-        value={color}
-        onChange={(input) => setColor(input.target.value)}
-        placeholder="Color of the loader"
-      />
-
-      <BounceLoader loading={loading} color={color} />
+    <div className="flex min-h-64 items-center justify-center">
+      <MorphingInfinity className="size-16 text-foreground" />
     </div>
   );
 }
-
-export default Spinner;
