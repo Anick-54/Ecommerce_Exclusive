@@ -9,7 +9,6 @@ import { Free } from "../Components/Free"
 
 
 export const Home = () => {
-	
 	return (
 		<>
 			<Banner />
