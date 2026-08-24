@@ -2,8 +2,8 @@ import { Outlet } from "react-router-dom"
 import { Header } from "./Components/Header"
 import { NavBar } from "./Components/NavBar"
 import { Footer } from "./Components/Footer"
-import { useEffect, useState } from "react"
-import { Container } from "./Components/Container"
+// import { useEffect, useState } from "react"
+// import { Container } from "./Components/Container"
  
 
 
