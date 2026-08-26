@@ -12,8 +12,9 @@ import { ProductReducer} from "../Slices/ProductSlice";
 
 
 
-
 export const Shop = () => {
+
+  
 
   const [optionShow, setOptionShow] = useState(12);
   const [loading, setLoading] = useState(true);
@@ -70,8 +71,6 @@ export const Shop = () => {
                 <option value={12}>12</option>
               </select>
             </div>
-
-
 
 
             {loading ? (
