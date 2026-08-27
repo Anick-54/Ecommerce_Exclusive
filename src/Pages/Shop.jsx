@@ -10,11 +10,9 @@ import { Skeleton } from "../Components/Skeleton";
 import { useDispatch } from 'react-redux'
 import { ProductReducer} from "../Slices/ProductSlice";
 
-
-
 export const Shop = () => {
 
-  
+
 
   const [optionShow, setOptionShow] = useState(12);
   const [loading, setLoading] = useState(true);
