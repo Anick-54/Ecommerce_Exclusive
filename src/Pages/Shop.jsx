@@ -13,7 +13,6 @@ import { ProductReducer} from "../Slices/ProductSlice";
 
 
 
-
 export const Shop = () => {
 
   const [optionShow, setOptionShow] = useState(12);
@@ -37,6 +36,9 @@ export const Shop = () => {
   useEffect(() => {
     getAllProducts();
   }, []);
+
+
+  
 
   return (
     <>
