@@ -75,6 +75,8 @@ export const Shop = () => {
             </div>
 
 
+
+
             {loading ? (
               <div className="lg:flex lg:flex-wrap pl-12 lg:pl-0 lg:justify-between">
                 {Array.from({ length: optionShow }).map((_, index) => (
