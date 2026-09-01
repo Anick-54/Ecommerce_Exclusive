@@ -18,7 +18,9 @@ export const Shop = () => {
   const [optionShow, setOptionShow] = useState(12);
   const [loading, setLoading] = useState(true);
 //   const [products, setProducts] = useState([]);
-  
+
+
+
     const dispatch = useDispatch ();
 
   async function getAllProducts() {
@@ -39,7 +41,6 @@ export const Shop = () => {
 
 
   
-
   return (
     <>
       <Container className="mt-10 mb-10">
