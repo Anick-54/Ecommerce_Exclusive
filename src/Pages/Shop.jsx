@@ -20,7 +20,6 @@ export const Shop = () => {
 //   const [products, setProducts] = useState([]);
 
 
-
     const dispatch = useDispatch ();
 
   async function getAllProducts() {
