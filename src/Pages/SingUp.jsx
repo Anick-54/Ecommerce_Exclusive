@@ -11,7 +11,6 @@ export const SingUp = () => {
 
 
 
-
   const [name,setName] = useState ('')
   const [email,setEmail] = useState ('')
   const [password,setPassword] = useState ('')
@@ -50,11 +49,6 @@ export const SingUp = () => {
         });
     }
   }
- 
-
-
-  
-
   return (
     <>
       <Container className="mt-10 ">
@@ -103,8 +97,6 @@ export const SingUp = () => {
           </div>
         </div>
       </Container>
-
-
     </>
   )
 }

@@ -1,11 +1,56 @@
 import { BredCrumb } from "../Components/BredCrumb"
 import { Container } from "../Components/Container"
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import S from "../assets/SU.png"
 import Goole from "../assets/Google.png"
-import { Link } from "react-router"
+import { useNavigate } from "react-router-dom"
+import { useState } from "react";
+
+
 
 
 export const LogIn = () => {
+  const [email, setEmail] = useState(" ")
+  const [password, setPassword] = useState(" ")
+
+  const navigate = useNavigate();
+  
+
+
+ const auth = getAuth();
+
+
+
+  const handleLogin = (e) => {
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        navigate ("/");
+
+
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        
+        alert(errorCode);
+        alert(errorMessage);
+
+      });
+        
+
+
+
+
+
+
+  }
+
+
+
+
   return (
     <>
       <Container className="mt-10 ">
@@ -27,15 +72,15 @@ export const LogIn = () => {
 
             </div> */}
             <div className="mt-10 mb-10">
-              <input type="email" placeholder="Email Or Phone Number" className="w-[370px] h-8 border-b focus:outline-none" />
+              <input type="email" placeholder="Email Or Phone Number" className="w-[370px] h-8 border-b focus:outline-none" onChange = {(e) => setEmail(e.currentTarget.value)}/>
 
             </div>
             <div>
-              <input type="password" placeholder="Password" className="w-[370px] h-8 border-b focus:outline-none" />
+              <input type="password" placeholder="Password" className="w-[370px] h-8 border-b focus:outline-none" onChange={(e) => setPassword(e.currentTarget.value)} />
 
             </div>
             <div className="flex justify-between mt-10 ">
-              <button className="bg-primary text-white w-[143px] h-14 rounded-md hover:bg-red-700 cursor-pointer">Log In</button>
+              <button className="bg-primary text-white w-[143px] h-14 rounded-md hover:bg-red-700 cursor-pointer" onClick={handleLogin}>Log In</button>
               <button className="border-1 border-secondary  rounded-md w-[143px] h-14 hover:bg-secondary cursor-pointer">Forget Password</button>
             </div>
             
