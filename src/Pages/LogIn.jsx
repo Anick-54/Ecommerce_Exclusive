@@ -2,7 +2,6 @@ import { BredCrumb } from "../Components/BredCrumb"
 import { Container } from "../Components/Container"
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import S from "../assets/SU.png"
-import Goole from "../assets/Google.png"
 import { useNavigate } from "react-router-dom"
 import { useState } from "react";
 

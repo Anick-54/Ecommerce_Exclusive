@@ -13,7 +13,6 @@ import { removeReducer, updateReducer } from '../Cart/CartSlice'
 
 export const Cart = () => {
 
-
   const dispatch = useDispatch();
   const cartItems = useSelector ((state)=> state.cart.items)
   const total = cartItems.reduce((sum, item)=> sum + item.price * item.quantity, 0);
@@ -31,10 +30,6 @@ export const Cart = () => {
     </Container>
     </>
   }
-
-
-
-
 
   return (
     <>

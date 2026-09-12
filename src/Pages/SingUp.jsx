@@ -4,7 +4,11 @@ import S from "../assets/SU.png"
 import Goole from "../assets/Google.png"
 import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react"
-import { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification  } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification } from "firebase/auth";
+import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+
+
+
 
 
 export const SingUp = () => {
@@ -49,6 +53,30 @@ export const SingUp = () => {
         });
     }
   }
+  const provider = new GoogleAuthProvider();
+  const auth = getAuth();
+  const handleGoole = () => {
+      signInWithPopup(auth, provider)
+        .then((result) => {
+          
+          const credential = GoogleAuthProvider.credentialFromResult(result);
+          const token = credential.accessToken;
+          
+          const user = result.user;
+          
+        }).catch((error) => {
+          
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          
+          const email = error.customData.email;
+          
+          const credential = GoogleAuthProvider.credentialFromError(error);
+          
+        });
+
+
+  }
   return (
     <>
       <Container className="mt-10 ">
@@ -84,7 +112,7 @@ export const SingUp = () => {
                 <div className="items-center">
                   <img src={Goole} alt="icon"/>
                 </div>
-                <div>
+                <div onClick ={handleGoole}>
                   Sign up with Google
                 </div>
               
