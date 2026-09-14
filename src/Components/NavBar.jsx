@@ -101,7 +101,7 @@ export const NavBar = () => {
                   <Link to="/shop">Shop</Link>
                 </ListItem>
                 <ListItem className="customize">
-                  <Link to="/singup">SingUp</Link>
+                  <Link to="/singup">SignUp</Link>
                 </ListItem>
               </List>
             </div>
