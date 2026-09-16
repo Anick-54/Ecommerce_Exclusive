@@ -16,7 +16,6 @@ import { FaRegUser } from "react-icons/fa";
 
 
 
-
 export const NavBar = () => {
 
 
@@ -28,7 +27,6 @@ export const NavBar = () => {
   const handleClick =()=>{
     setShow(!show)
   }
-
 
             // Filtering Products
   const products = useSelector((state)=>state.allProducts.value);
@@ -46,9 +44,7 @@ export const NavBar = () => {
     }else{
       setFilteredProduct(products.filter((item)=> item.title.toLoweCase(). includes(value.toLoweCase())));  
     }
-  
   }
-
   return (
     <> 
     <nav className="pt-4 lg:pt-10 pb-4 border-b-1 border-[#b3b3b3] relative">
