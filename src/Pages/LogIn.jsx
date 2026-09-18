@@ -8,6 +8,8 @@ import { useState } from "react";
 
 
 
+
+
 export const LogIn = () => {
   const [email, setEmail] = useState(" ")
   const [password, setPassword] = useState(" ")
@@ -43,12 +45,7 @@ export const LogIn = () => {
 
 
 
-
-
   }
-
-
-
 
   return (
     <>

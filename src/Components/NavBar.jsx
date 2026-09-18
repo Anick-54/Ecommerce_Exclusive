@@ -17,6 +17,14 @@ import { FaRegUser } from "react-icons/fa";
 export const NavBar = () => {
 
 
+
+  const [sign, setSign] = useState (false)
+   const handlClick =()=>{
+    setSign(!sign)
+   }
+
+
+
   const cartItems = useSelector ((state)=> state.cart.items);
   const itemCout= cartItems.reduce((total, item)=> total + item.quantity, 0);
 
@@ -114,8 +122,14 @@ export const NavBar = () => {
                     {itemCout > 0 && (<span className="absolute left-4.5 bottom-6 bg-primary text-white rounded-full w-5 h-5 text-[16px] items-center text-center ">{itemCout}</span>)}
                   </Link>
                 </div>
-                <div>
-                  <FaRegUser size={23}/>
+                <div className="relative">
+                  <FaRegUser size={23} onClick={handlClick}  className="cursor-pointer"/>
+                </div>
+                <div className={`${sign ? 'block' : 'hidden'} absolute top-20 right-0
+                 px-5 z-50 lg:top-20 lg:right-60 lg:px-5 lg: block flex-wrap w-40 h-30 bg-black text-white text-[16px] pl-5 pt-4 ml-5 leading-7 `}>
+                  <Link to={'/login'}><h4>Login</h4></Link>
+                  <Link to={'/singup'}><h4>SignIn</h4></Link>
+                  <h4>SignOut</h4>
                 </div>
               </div>
             </div>
