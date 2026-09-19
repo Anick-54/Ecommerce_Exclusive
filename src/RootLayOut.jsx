@@ -8,11 +8,9 @@ import { Footer } from "./Components/Footer"
 
 
 
-
 export const RootLayOut = () => {
 
 //  const [isloading, setIsLoading] = useState(true)
-
 //   useEffect(()=>{
 //    const time = setTimeout(() => {
 //       setIsLoading(false)
@@ -21,7 +19,6 @@ export const RootLayOut = () => {
 
 //     return () => clearTimeout(time);
 //   } ,[])
-
 
 
 
