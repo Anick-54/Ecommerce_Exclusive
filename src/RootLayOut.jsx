@@ -7,7 +7,6 @@ import { Footer } from "./Components/Footer"
  
 
 
-
 export const RootLayOut = () => {
 
 //  const [isloading, setIsLoading] = useState(true)
@@ -19,8 +18,6 @@ export const RootLayOut = () => {
 
 //     return () => clearTimeout(time);
 //   } ,[])
-
-
 
 //   if(isloading) {
 //     return <Container>
