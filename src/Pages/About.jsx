@@ -15,7 +15,6 @@ import { Free } from "../Components/Free";
 
 
 
-
 export const About = () => {
   return (
     <>
@@ -37,7 +36,6 @@ export const About = () => {
             <div className="w-15 h-15 rounded-full bg-black absolute top-2.5 left-2.5 relative">
             <BsShop size={40} className="absolute top-2.5 left-2.5 text-white"/>
 
-              
             </div>
             <h5 className="text-[32px] font-bold font-inter text-center mt-6">10.5K</h5>
             {/* <p className="w-[170px] font-inter mt-3">Sallers active our site</p> */}
