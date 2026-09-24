@@ -14,7 +14,6 @@ import { Free } from "../Components/Free";
 
 
 
-
 export const About = () => {
   return (
     <>
@@ -73,7 +72,6 @@ export const About = () => {
           </div>
         </div>
         
-        
       </div>
       <div className=" lg:flex gap-7.5 mb-[140px] pl-6">
         <Card5  
@@ -93,7 +91,6 @@ export const About = () => {
         />
       </div>
       <Free/>
-     
     </Container>
     </>
   )

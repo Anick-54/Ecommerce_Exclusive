@@ -30,7 +30,6 @@ export const Cart = () => {
     </Container>
     </>
   }
-
   return (
     <>
     <Container className="mt-10 mb-10">
@@ -104,7 +103,6 @@ export const Cart = () => {
           </div>
 
         </div>
-
       </div>
     </Container>
     </>
