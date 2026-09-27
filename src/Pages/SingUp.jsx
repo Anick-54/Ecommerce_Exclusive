@@ -74,8 +74,6 @@ export const SingUp = () => {
           const credential = GoogleAuthProvider.credentialFromError(error);
           
         });
-
-
   }
   return (
     <>
@@ -117,7 +115,6 @@ export const SingUp = () => {
                 </div>
               
               </div>
-              
             </button>
             <div className="text-center">
                 <h4>Already have account? <Link to="/login"><span className="border-b font-semibold">Log in</span></Link></h4>
