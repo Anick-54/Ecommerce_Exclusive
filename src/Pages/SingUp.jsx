@@ -11,8 +11,8 @@ import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
 
 
-export const SingUp = () => {
 
+export const SingUp = () => {
 
 
   const [name,setName] = useState ('')
@@ -104,8 +104,6 @@ export const SingUp = () => {
 
             </div>
             <button className="w-[371px] h-14 bg-primary text-white rounded-md mt-10 cursor-pointer hover:bg-red-700" onClick={handleClick}>Create Account</button>
-
-
             
             <button className="mt-10 mb-10  w-[371px] h-14 border-1 border-secondary rounded-md hover:bg-secondary cursor-pointer ">
               <div className="flex justify-center gap-4">
