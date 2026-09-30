@@ -10,10 +10,7 @@ import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
 
 
-
-
 export const SingUp = () => {
-
 
   const [name,setName] = useState ('')
   const [email,setEmail] = useState ('')
