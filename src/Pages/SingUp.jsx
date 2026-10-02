@@ -11,7 +11,6 @@ import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
 
 export const SingUp = () => {
-
   const [name,setName] = useState ('')
   const [email,setEmail] = useState ('')
   const [password,setPassword] = useState ('')
@@ -45,7 +44,6 @@ export const SingUp = () => {
           const errorMessage = error.message;
           alert('fil the all ');
           console.log(errorMessage);
-          
           
         });
     }
@@ -109,8 +107,7 @@ export const SingUp = () => {
                 </div>
                 <div onClick ={handleGoole}>
                   Sign up with Google
-                </div>
-              
+                </div>             
               </div>
             </button>
             <div className="text-center">
