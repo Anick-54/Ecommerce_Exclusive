@@ -16,9 +16,7 @@ export const SingUp = () => {
   const [password,setPassword] = useState ('')
 
   const navigate = useNavigate();
-
   const handleClick = (e) => {
-    
     if(name && email && password){
       const auth = getAuth();
       createUserWithEmailAndPassword(auth, email, password)
