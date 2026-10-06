@@ -9,12 +9,13 @@ import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
 
 
-
 export const SingUp = () => {
   const [name,setName] = useState ('')
   const [email,setEmail] = useState ('')
   const [password,setPassword] = useState ('')
 
+
+  
   const navigate = useNavigate();
   const handleClick = (e) => {
     if(name && email && password){
