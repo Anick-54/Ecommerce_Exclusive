@@ -5,7 +5,6 @@ import { SlArrowDown } from "react-icons/sl";
 
 
 
-
 export const Header = () => {
     const[show, setShow] = useState(false);
     const handleClick = () =>{
