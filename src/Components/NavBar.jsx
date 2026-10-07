@@ -128,9 +128,9 @@ export const NavBar = () => {
                 </div>
                 <div className={`${sign ? 'block' : 'hidden'} absolute top-20 right-0
                  px-5 z-50 lg:top-18 lg:right-65 lg:px-5 lg: block flex-wrap w-30 h-30 bg-black rounded-lg  text-white text-[16px] pl-5 pt-4 ml-5 leading-7 `}>
-                  <Link to={'/login'}><h4 className=" font-bold font-poppins  hover:text-pink-900">Login</h4></Link>
-                  <Link to={'/singup'}><h4 className=" font-bold font-poppins  hover:text-pink-900">SignIn</h4></Link>
-                  <h4 className=" font-bold font-poppins  hover:text-pink-900 cursor-pointer">SignOut</h4>
+                  <Link to={'/login'}><h4 className=" font-bold font-poppins  hover:text-pink-500">Login</h4></Link>
+                  <Link to={'/singup'}><h4 className=" font-bold font-poppins  hover:text-pink-500">SignIn</h4></Link>
+                  <h4 className=" font-bold font-poppins  hover:text-pink-500 cursor-pointer">SignOut</h4>
                 </div>
               </div>
             </div>
