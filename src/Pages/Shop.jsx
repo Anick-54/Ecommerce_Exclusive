@@ -12,9 +12,10 @@ import { ProductReducer} from "../Slices/ProductSlice";
 
 
 
-
 export const Shop = () => {
 
+
+  
   const [optionShow, setOptionShow] = useState(12);
   const [loading, setLoading] = useState(true);
 //   const [products, setProducts] = useState([]);
