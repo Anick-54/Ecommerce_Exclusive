@@ -25,8 +25,6 @@ export const NavBar = () => {
    }
 
 
-   
-
   const cartItems = useSelector ((state)=> state.cart.items);
   const itemCout= cartItems.reduce((total, item)=> total + item.quantity, 0);
 
