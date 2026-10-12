@@ -15,15 +15,12 @@ import { FaRegUser } from "react-icons/fa";
 
 
 
-
-
 export const NavBar = () => {
 
   const [sign, setSign] = useState (false)
    const handlClick =()=>{
     setSign(!sign)
    }
-
 
   const cartItems = useSelector ((state)=> state.cart.items);
   const itemCout= cartItems.reduce((total, item)=> total + item.quantity, 0);
