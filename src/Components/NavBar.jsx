@@ -16,6 +16,8 @@ import { FaRegUser } from "react-icons/fa";
 
 export const NavBar = () => {
 
+
+  
   const [sign, setSign] = useState (false)
    const handlClick =()=>{
     setSign(!sign)
